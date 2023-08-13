@@ -1,0 +1,55 @@
+public
+
+    CONTINENT | dropped
+
+        id : UUID | key, unique
+        code : STRING
+        name : STRING
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
+    COUNTRY | dropped
+
+        id : UUID | key, unique
+        code : STRING
+        name : STRING
+        fullName : STRING
+        continentCode : CONTINENT.code
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
+    USER_PROFILE | dropped, count 20
+
+        id : UUID | key, unique
+        firstName : STRING
+        lastName : STRING
+        email : STRING
+        phoneNumber : STRING
+        countryCode : COUNTRY.code
+        imagePath : STRING = "/image/profile/profile_{{integer 1 20}}.jpg"
+        userId : UUID
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
+    PROPERTY | dropped, count 20
+
+        id : UUID | key, unique
+        number : FLOAT64
+        city : STRING
+        country : STRING
+        title : STRING = "{{latin 1 1 3 4}}"
+        description : STRING = "{{latin 5 10 8 16}}"
+        price : FLOAT64
+        userId : UUID
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
+    PROPERTY_IMAGE | dropped, count 80
+
+        id : UUID | key, unique
+        number : FLOAT64
+        propertyId : PROPERTY.id
+        imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg|/image/property/inside_{{integer 1 16}}.jpg"
+        userId : UUID
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
