@@ -1,8 +1,8 @@
 <style>
     .property-list
     {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax( 20rem, 1fr ) );
         gap: 2rem;
     }
 
@@ -12,26 +12,15 @@
 
     .property-title
     {
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
-    }
-
-    .property-image-list
-    {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
     }
 
     .property-image
     {
         width: 20rem;
         height: 15rem;
-    }
-
-    .property-image
-    {
         object-fit: cover;
     }
 </style>
@@ -39,15 +28,9 @@
 <div class="property-list">
     { #each data.propertyArray as property }
         <div class="property">
+            <img class="property-image" src="{ property.imagePath }"/>
             <div class="property-title">
-                <a href="/property/{ property.id}">{ property.title }</a>
-            </div>
-            <div class="property-image-list">
-                { #each property.imageArray as propertyImage }
-                    <div class="property-image-container">
-                        <img class="property-image" src="{ propertyImage.filePath }"/>
-                    </div>
-                { /each }
+                <a href="/property/{ property.id }">{ property.title }</a>
             </div>
         </div>
     { /each }

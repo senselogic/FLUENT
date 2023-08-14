@@ -16,3 +16,5 @@ export const database
           process.env.FLUENT_DATABASE_URL,
           process.env.FLUENT_DATABASE_KEY
           );
+console.log( process.env.FLUENT_DATABASE_URL );
+console.log( process.env.FLUENT_DATABASE_KEY );

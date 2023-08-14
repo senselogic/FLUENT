@@ -45,7 +45,7 @@ export async function getDatabasePropertyArray(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property' )
+              .from( databaseTablePrefix + 'PROPERTY' )
               .select()
               .order( 'number' );
 
@@ -67,7 +67,7 @@ export async function getDatabasePropertyById(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property' )
+              .from( databaseTablePrefix + 'PROPERTY' )
               .select()
               .eq( 'id', propertyId );
 
@@ -76,7 +76,14 @@ export async function getDatabasePropertyById(
         printError( error );
     }
 
-    return data;
+    if ( data !== null )
+    {
+        return data[ 0 ];
+    }
+    else
+    {
+        return null;
+    }
 }
 
 // ~~
@@ -87,7 +94,7 @@ export async function addDatabaseProperty(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property' )
+              .from( databaseTablePrefix + 'PROPERTY' )
               .insert( property );
 
     if ( error !== null )
@@ -107,7 +114,7 @@ export async function setDatabasePropertyById(
 {
     const { data, error }
         = await database
-            .from( databaseTablePrefix + 'property' )
+            .from( databaseTablePrefix + 'PROPERTY' )
             .update( property )
             .eq( 'id', propertyId );
 
@@ -127,7 +134,7 @@ export async function removeDatabasePropertyById(
 {
     const { data, error }
         = await database
-            .from( databaseTablePrefix + 'property' )
+            .from( databaseTablePrefix + 'PROPERTY' )
             .delete()
             .eq( 'id', propertyId );
 

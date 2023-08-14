@@ -21,10 +21,6 @@
     {
         width: 20rem;
         height: 15rem;
-    }
-
-    .property-image
-    {
         object-fit: cover;
     }
 </style>
@@ -37,7 +33,7 @@
         <div class="property-image-list">
             { #each data.propertyImageArray as propertyImage }
                 <div class="property-image-container">
-                    <img class="property-image" src="{ propertyImage.filePath }"/>
+                    <img class="property-image" src="{ propertyImage.imagePath }"/>
                 </div>
             { /each }
         </div>

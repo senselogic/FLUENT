@@ -10,7 +10,7 @@ export async function getDatabasePropertyImageArray(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .select()
               .order( 'number' );
 
@@ -30,9 +30,9 @@ export async function getDatabasePropertyImageArrayByPropertyId(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .select()
-              .eq( 'id', propertyImageId )
+              .eq( 'propertyId', propertyImageId )
               .order( 'number' );
 
     if ( error !== null )
@@ -51,7 +51,7 @@ export async function getDatabasePropertyImageById(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .select()
               .eq( 'id', propertyImageId );
 
@@ -60,7 +60,14 @@ export async function getDatabasePropertyImageById(
         printError( error );
     }
 
-    return data;
+    if ( data !== null )
+    {
+        return data[ 0 ];
+    }
+    else
+    {
+        return null;
+    }
 }
 
 // ~~
@@ -71,7 +78,7 @@ export async function addDatabasePropertyImage(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .insert( propertyImage );
 
     if ( error !== null )
@@ -91,7 +98,7 @@ export async function setDatabasePropertyImageById(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .update( propertyImage )
               .eq( 'id', propertyImageId );
 
@@ -111,7 +118,7 @@ export async function removeDatabasePropertyImageById(
 {
     const { data, error }
         = await database
-              .from( databaseTablePrefix + 'property_image' )
+              .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
               .delete()
               .eq( 'id', propertyImageId );
 
