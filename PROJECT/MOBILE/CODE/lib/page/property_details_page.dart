@@ -5,11 +5,12 @@ import 'package:go_router/go_router.dart';
 
 // -- TYPES
 
-class PropertyListScreen extends StatelessWidget
+class PropertyDetailsPage
+    extends StatelessWidget
 {
     // -- CONSTRUCTORS
 
-    const PropertyListScreen(
+    const PropertyDetailsPage(
         { super.key }
         );
 
@@ -21,11 +22,11 @@ class PropertyListScreen extends StatelessWidget
         )
     {
         return Scaffold(
-            appBar: AppBar( title: const Text( 'Property list' ) ),
+            appBar: AppBar( title: const Text( 'Property details' ) ),
             body: Center(
                 child: ElevatedButton(
-                    onPressed: () => context.go( '/property' ),
-                    child: const Text( 'Property details' )
+                    onPressed: () => context.go( '/' ),
+                    child: const Text( 'Back' )
                     )
                 )
             );

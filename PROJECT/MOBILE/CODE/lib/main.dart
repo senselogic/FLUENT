@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-import 'database/supabase.dart';
-import 'screen/property_details_screen.dart';
-import 'screen/property_list_screen.dart';
+import 'database/database.dart';
+import 'page/property_details_page.dart';
+import 'page/property_list_page.dart';
 
 // -- TYPES
 
-class FluentApp extends StatelessWidget
+class FluentApp
+    extends StatelessWidget
 {
     // -- CONSTRUCTORS
 
@@ -37,10 +37,7 @@ Future<void> main(
 {
     WidgetsFlutterBinding.ensureInitialized();
 
-    await Supabase.initialize(
-        url: FLUENT_DATABASE_URL,
-        anonKey: FLUENT_DATABASE_KEY
-        );
+    await initializeDatabase();
 
     runApp( const FluentApp() );
 }
@@ -57,7 +54,7 @@ final GoRouter
                     {
                         return CustomTransitionPage(
                             key: state.pageKey,
-                            child: const PropertyListScreen(),
+                            child: PropertyListPage(),
                             transitionsBuilder:
                                 ( context, animation, secondaryAnimation, child )
                                 {
@@ -73,7 +70,7 @@ final GoRouter
                             {
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: const PropertyDetailsScreen(),
+                                    child: PropertyDetailsPage(),
                                     transitionsBuilder:
                                         ( context, animation, secondaryAnimation, child )
                                         {
@@ -86,7 +83,3 @@ final GoRouter
                 )
             ]
         );
-
-final SupabaseClient
-    database = Supabase.instance.client;
-

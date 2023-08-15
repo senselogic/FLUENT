@@ -1,5 +1,0 @@
-// -- CONSTANTS
-
-const 
-    FLUENT_DATABASE_URL = 'https://cbensgpsceujlmmoywra.supabase.co',
-    FLUENT_DATABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNiZW5zZ3BzY2V1amxtbW95d3JhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIwMDM2NzAsImV4cCI6MjAwNzU3OTY3MH0.da-LQs_o-XrjQPHZmOGuOWJGfKMI3ncnR4UtpoehEvw';
