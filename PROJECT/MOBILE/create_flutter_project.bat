@@ -10,13 +10,14 @@ call flutter pub add extra_alignments
 call flutter pub add file_picker
 call flutter pub add flextras
 call flutter pub add flutter_animate
+call flutter pub add flutter_drag_and_drop
 call flutter pub add flutter_form_builder
 call flutter pub add flutter_local_notifications
 call flutter pub add flutter_markdown
-call flutter pub add flutter_modular
 call flutter pub add flutter_native_splash
 call flutter pub add flutter_slidable
 call flutter pub add flutter_triple
+call flutter pub add go_router
 call flutter pub add intro_slider
 call flutter pub add niku
 call flutter pub add permission_handler
@@ -24,6 +25,8 @@ call flutter pub add responsive_builder
 call flutter pub add shared_preferences
 call flutter pub add sized_context
 call flutter pub add sprintf
+call flutter pub add supabase_flutter
 call flutter pub add textstyle_extensions
 call flutter pub add universal_platform
+call flutter pub add url_launcher
 pause
