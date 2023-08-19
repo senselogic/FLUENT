@@ -2,7 +2,7 @@
 
 import 'package:flutter_triple/flutter_triple.dart';
 import '../entity/property_entity.dart';
-import '../repository/property_repository.dart';
+import '../service/property_service.dart';
 
 // -- TYPES
 
@@ -20,12 +20,11 @@ class PropertyStore
     Future<void> getPropertyArray(
         ) async
     {
-        setLoading(true);
+        setLoading( true );
 
         try
         {
-            final propertyArray = await propertyRepository.getDatabasePropertyArray();
-print('propertyArray: $propertyArray');
+            final propertyArray = await propertyService.getDatabasePropertyArray();
             update( propertyArray );
         }
         catch ( exception )
@@ -33,7 +32,7 @@ print('propertyArray: $propertyArray');
             setError( Exception( 'Failed to get properties' ) );
         }
 
-        setLoading(false);
+        setLoading( false );
     }
 }
 

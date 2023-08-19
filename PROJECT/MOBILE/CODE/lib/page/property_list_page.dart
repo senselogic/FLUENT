@@ -38,6 +38,7 @@ class PropertyListPageState
         )
     {
         super.initState();
+
         propertyStore.getPropertyArray();
     }
 
@@ -54,32 +55,28 @@ class PropertyListPageState
                 ),
             body: ScopedBuilder<PropertyStore, List<PropertyEntity>>(
                 store: propertyStore,
-                onLoading: ( context ) => Center( child: CircularProgressIndicator() ),
-                onError: ( context, error ) => Center( child: Text( error.toString() ) ),
-                onState: ( context, propertyArray ) => Center(
-                    child: Column(
-                        children: [
-                            ElevatedButton(
-                                onPressed: () => context.go( '/property' ),
-                                child: const Text( 'Property details' )
-                                ),
-                            ListView.builder(
+                onLoading:
+                    ( context ) =>
+                        Center( child: CircularProgressIndicator() ),
+                onError:
+                    ( context, error ) =>
+                        Center( child: Text( error.toString() ) ),
+                onState:
+                    ( context, propertyArray ) =>
+                        ListView.builder(
                                 itemCount: propertyArray.length,
                                 itemBuilder:
                                     ( context, index )
                                     {
                                         final
                                             property = propertyArray[ index ];
-print('property: $property');
+
                                         return ListTile(
                                             title: Text( property.title ),
                                             onTap: () => context.go( '/property' ),
                                             );
                                     }
                                 )
-                            ]
-                        )
-                    )
                 )
             );
     }

@@ -5,7 +5,7 @@ import '../entity/property_entity.dart';
 
 // -- TYPES
 
-class PropertyRepository
+class PropertyService
 {
     // -- OPERATIONS
 
@@ -13,12 +13,13 @@ class PropertyRepository
         ) async
     {
         final response = await database.from( 'PROPERTY' ).select().execute();
+        final List<PropertyEntity> propertyArray = response.data.map( ( map ) => PropertyEntity.fromMap( map ) ).toList().cast<PropertyEntity>();
 
-        return response.data.map( ( map ) => PropertyEntity.fromMap( map ) ).toList();
+        return propertyArray;
     }
 }
 
 // -- VARIABLES
 
 final
-    propertyRepository = PropertyRepository();
+    propertyService = PropertyService();
