@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'database/database.dart';
-import 'page/property_details_page.dart';
-import 'page/property_list_page.dart';
+import 'property/property_details_page.dart';
+import 'property/property_list_page.dart';
 
 // -- TYPES
 

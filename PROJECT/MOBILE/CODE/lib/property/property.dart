@@ -1,6 +1,6 @@
 // -- TYPES
 
-class PropertyEntity
+class Property
 {
     // -- ATTRIBUTES
 
@@ -9,9 +9,9 @@ class PropertyEntity
         title,
         description;
 
-    // -- CONSTRUCTORES
+    // -- CONSTRUCTORS
 
-    PropertyEntity(
+    Property(
         {
             required this.id,
             required this.title,
@@ -21,14 +21,27 @@ class PropertyEntity
 
     // -- INQUIRIES
 
-    factory PropertyEntity.fromMap(
+    factory Property.fromMap(
         Map<String, dynamic> map
         )
     {
-        return PropertyEntity(
+        return Property(
             id: map[ 'id' ],
             title: map[ 'title' ],
             description: map[ 'description' ]
             );
+    }
+
+    // ~~
+
+    Map<String, dynamic> toMap(
+        )
+    {
+        return
+            {
+                "id": id,
+                "title": title,
+                "description": description
+            };
     }
 }
