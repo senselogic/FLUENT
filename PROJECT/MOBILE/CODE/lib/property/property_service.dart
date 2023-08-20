@@ -12,21 +12,9 @@ class PropertyService
     Future<List<Property>> getDatabasePropertyList(
         ) async
     {
-        late final List<Property>
-            propertyList;
+        final response = await database.from( 'PROPERTY' ).select().execute();
 
-        try
-        {
-            final response = await database.from( 'PROPERTY' ).select().execute();
-
-            propertyList = response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
-        }
-        catch ( exception )
-        {
-            print( exception.toString() );
-        }
-print( propertyList.toString() );
-        return propertyList;
+        return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
     }
 }
 

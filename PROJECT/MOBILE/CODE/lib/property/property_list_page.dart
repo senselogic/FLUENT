@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'property.dart';
-import 'property_list_cubit.dart';
-import 'property_list_cubit_state.dart';
+import 'property_list_store.dart';
+import 'property_list_store_state.dart';
 
 // -- TYPES
 
@@ -38,8 +38,8 @@ class PropertyListPageState
 {
     // -- ATTRIBUTES
 
-    late final PropertyListCubit
-        propertyListCubit;
+    late final PropertyListStore
+        propertyListStore;
 
     // -- OPERATIONS
 
@@ -49,8 +49,8 @@ class PropertyListPageState
     {
         super.initState();
 
-        propertyListCubit = PropertyListCubit();
-        propertyListCubit.getPropertyList();
+        propertyListStore = PropertyListStore();
+        propertyListStore.getPropertyList();
     }
 
     // ~~
@@ -64,8 +64,8 @@ class PropertyListPageState
             appBar: AppBar(
                 title: const Text( 'Property list' )
                 ),
-            body: BlocConsumer<PropertyListCubit, PropertyListCubitState>(
-                bloc: propertyCubit,
+            body: BlocConsumer<PropertyListStore, PropertyListStoreState>(
+                bloc: propertyListStore,
                 listener:
                     ( context, state )
                     {
@@ -73,20 +73,19 @@ class PropertyListPageState
                 builder:
                     ( context, state )
                     {
-print( state );
-                        if ( state is PropertyListCubitInitialState )
+                        if ( state is PropertyListStoreInitialState )
                         {
                             return Text( 'Initial' );
                         }
-                        else if ( state is PropertyListCubitLoadingState )
+                        else if ( state is PropertyListStoreLoadingState )
                         {
                             return Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is PropertyListCubitErrorState )
+                        if ( state is PropertyListStoreErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
-                        else if ( state is PropertyListCubitLoadedState )
+                        else if ( state is PropertyListStoreLoadedState )
                         {
                             return
                                 ListView.builder(
