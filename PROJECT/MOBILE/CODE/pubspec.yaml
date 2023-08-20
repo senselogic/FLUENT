@@ -51,7 +51,6 @@ dependencies:
   drag_and_drop_lists: ^0.3.3
   flutter_form_builder: ^9.1.0
   flutter_slidable: ^3.0.0
-  niku: ^2.4.2
   sized_context: ^1.0.0+4
   universal_platform: ^1.0.0+1
   cached_network_image: ^3.2.3

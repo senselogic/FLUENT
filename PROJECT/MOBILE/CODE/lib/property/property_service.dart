@@ -9,10 +9,27 @@ class PropertyService
 {
     // -- INQUIRIES
 
-    Future<List<Property>> getDatabasePropertyList(
+    Future<List<Property>> getPropertyList(
         ) async
     {
         final response = await database.from( 'PROPERTY' ).select().execute();
+
+        return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+    }
+
+    // ~~
+
+    Future<List<Property>> getUserPropertyList(
+        ) async
+    {
+        final userId = supabase.auth.currentUser?.id;
+
+        if ( userId == null )
+        {
+            return [];
+        }
+
+        final response = await database.from( 'PROPERTY' ).select().eq( 'userId', userId ).execute();
 
         return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
     }

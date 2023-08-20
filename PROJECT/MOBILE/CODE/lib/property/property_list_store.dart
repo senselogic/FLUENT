@@ -24,7 +24,24 @@ class PropertyListStore
         try
         {
             emit( PropertyListStoreLoadingState() );
-            final propertyList = await propertyService.getDatabasePropertyList();
+            final propertyList = await propertyService.getPropertyList();
+            emit( PropertyListStoreLoadedState( propertyList: propertyList ) );
+        }
+        catch ( exception )
+        {
+            emit( PropertyListStoreErrorState( error: exception.toString() ) );
+        }
+    }
+
+    // ~~
+
+    Future <void> getUserPropertyList(
+        ) async
+    {
+        try
+        {
+            emit( PropertyListStoreLoadingState() );
+            final propertyList = await propertyService.getUserPropertyList();
             emit( PropertyListStoreLoadedState( propertyList: propertyList ) );
         }
         catch ( exception )

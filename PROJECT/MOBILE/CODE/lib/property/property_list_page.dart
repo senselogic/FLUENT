@@ -100,6 +100,11 @@ class PropertyListPageState
 
                                             return ListTile(
                                                 title: Text( property.title ),
+                                                leading: CachedNetworkImage(
+                                                    imageUrl: property.imagePath,
+                                                    placeholder: ( context, url ) => CircularProgressIndicator(),
+                                                    errorWidget: ( context, url, error ) => Icon( Icons.error )
+                                                    ),
                                                 onTap: () => context.go( '/property' ),
                                                 );
                                         }
@@ -107,7 +112,7 @@ class PropertyListPageState
                         }
                         else
                         {
-                            return Text( 'Invalid state' );
+                            return Icon( Icons.error );
                         }
                     }
                 )

@@ -8,7 +8,6 @@ rem call flutter pub add carbon_icons
 call flutter pub add cached_network_image
 call flutter pub add dio
 call flutter pub add drag_and_drop_lists
-rem call flutter pub add equatable
 rem call flutter pub add eva_icons_flutter
 call flutter pub add extra_alignments
 call flutter pub add file_picker
@@ -23,7 +22,6 @@ rem call flutter pub add flutter_native_splash
 call flutter pub add flutter_slidable
 call flutter pub add go_router
 rem call flutter pub add intro_slider
-call flutter pub add niku
 rem call flutter pub add permission_handler
 rem call flutter pub add responsive_builder
 call flutter pub add shared_preferences
