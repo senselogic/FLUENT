@@ -2,7 +2,7 @@
 
 import { json } from '@sveltejs/kit';
 import { getRandomTuid } from 'senselogic-gist';
-import { getDatabasePropertyImageById, addDatabasePropertyImage, setDatabasePropertyImageById, removeDatabasePropertyImageById } from '$lib/database';
+import { propertyImageService } from '$lib/service/property_image_service';
 
 // -- FUNCTIONS
 
@@ -10,7 +10,7 @@ export async function GET(
     { params }
     )
 {
-    const propertyImage = await getDatabasePropertyImageById( params.propertyImageId );
+    const propertyImage = await propertyImageService.getPropertyImageById( params.propertyImageId );
 
     return json( propertyImage );
 }

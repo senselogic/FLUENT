@@ -27,7 +27,7 @@ public
         phoneNumber : STRING
         countryCode : COUNTRY.code
         imagePath : STRING = "/image/profile/profile_{{integer 1 20}}.jpg"
-        userId : UUID
+        userId : UUID | unique, constrained auth.users.id
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
@@ -41,7 +41,7 @@ public
         description : STRING = "{{latin 5 10 8 16}}"
         price : FLOAT64
         imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg"
-        userId : UUID
+        userId : UUID | constrained auth.users.id
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
@@ -51,6 +51,6 @@ public
         number : FLOAT64
         propertyId : PROPERTY.id
         imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg|/image/property/inside_{{integer 1 16}}.jpg"
-        userId : UUID
+        userId : UUID | constrained auth.users.id
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated

@@ -14,8 +14,8 @@ Future<void> initializeDatabase(
     ) async
 {
     await Supabase.initialize(
-        url: FLUENT_DATABASE_URL,
-        anonKey: FLUENT_DATABASE_KEY
+        url: databaseUrl,
+        anonKey: databaseKey
         );
 
     database = Supabase.instance.client;

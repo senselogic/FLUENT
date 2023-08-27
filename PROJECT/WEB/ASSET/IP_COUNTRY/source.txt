@@ -1,0 +1,6 @@
+https://www.npmjs.com/package/@ip-location-db/asn-country
+https://cdn.jsdelivr.net/npm/@ip-location-db/asn-country/asn-country-ipv4-num.csv
+https://cdn.jsdelivr.net/npm/@ip-location-db/asn-country/asn-country-ipv6-num.csv
+https://cdn.jsdelivr.net/npm/@ip-location-db/asn-country/asn-country-ipv6.csv
+https://cdn.jsdelivr.net/npm/@ip-location-db/asn-country/asn-country-ipv4.csv
+https://github.com/sapics/ip-location-db

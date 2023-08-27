@@ -5,6 +5,10 @@ import 'package:go_router/go_router.dart';
 import 'database/database.dart';
 import 'property/property_details_page.dart';
 import 'property/property_list_page.dart';
+import 'user/user_sign_in_page.dart';
+import 'user/user_sign_up_page.dart';
+import 'user/property/user_property_list_page.dart';
+import 'user/property/user_property_edition_page.dart';
 
 // -- TYPES
 
@@ -55,7 +59,7 @@ bool requiresUserIsAuthenticated(
     }
     else
     {
-        state.go('/signin');
+        context.go( '/signin' );
 
         return false;
     }
@@ -66,96 +70,120 @@ bool requiresUserIsAuthenticated(
 bool
     userIsAuthenticated = false;
 final GoRouter
-    router = GoRouter(
-        routes:
-            <RouteBase>[
-                GoRoute(
-                    path: '/',
-                    pageBuilder: ( context, state )
-                    {
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: PropertyListPage(),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+    router 
+        = GoRouter(
+            routes:
+                <RouteBase>[
+                    GoRoute(
+                        path: '/',
+                        pageBuilder: 
+                            ( context, state )
                             {
-                                return FadeTransition( opacity: animation, child: child );
+                                return CustomTransitionPage(
+                                    key: state.pageKey,
+                                    child: PropertyListPage(),
+                                    transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                    {
+                                        return FadeTransition( opacity: animation, child: child );
+                                    }
+                                    );
                             }
-                            );
-                    }
-                    ),
-                GoRoute(
-                    path: '/property/:propertyId',
-                    pageBuilder: ( context, state )
-                    {
-                        final propertyId = state.params[ 'propertyId' ];
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: PropertyDetailsPage( propertyId: propertyId ),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                            ),
+                    GoRoute(
+                        path: '/property/:propertyId',
+                        pageBuilder: 
+                            ( context, state )
                             {
-                                return FadeTransition( opacity: animation, child: child );
+                                final propertyId = state.params[ 'propertyId' ];
+
+                                return CustomTransitionPage(
+                                    key: state.pageKey,
+                                    child: PropertyDetailsPage( propertyId: propertyId ),
+                                    transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                    {
+                                        return FadeTransition( opacity: animation, child: child );
+                                    }
+                                    );
                             }
-                            );
-                    }
-                    ),
-                GoRoute(
-                    path: '/signin',
-                    pageBuilder: ( context, state )
-                    {
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: UserSignInScreen(),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                            ),
+                    GoRoute(
+                        path: '/signin',
+                        pageBuilder: 
+                            ( context, state )
                             {
-                                return FadeTransition( opacity: animation, child: child );
+                                return CustomTransitionPage(
+                                    key: state.pageKey,
+                                    child: UserSignInPage(),
+                                    transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                    {
+                                        return FadeTransition( opacity: animation, child: child );
+                                    }
+                                    );
                             }
-                            );
-                    }
-                    ),
-                GoRoute(
-                    path: '/signup',
-                    pageBuilder: ( context, state )
-                    {
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: UserSignUpScreen(),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                            ),
+                    GoRoute(
+                        path: '/signup',
+                        pageBuilder: 
+                            ( context, state )
                             {
-                                return FadeTransition( opacity: animation, child: child );
+                                return CustomTransitionPage(
+                                    key: state.pageKey,
+                                    child: UserSignUpScreen(),
+                                    transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                    {
+                                        return FadeTransition( opacity: animation, child: child );
+                                    }
+                                    );
                             }
-                            );
-                    }
-                    ),
-                GoRoute(
-                    path: '/user/properties',
-                    pageBuilder: ( context, state )
-                    {
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: UserPropertyListPage(),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                            ),
+                    GoRoute(
+                        path: '/user',
+                        pageBuilder: ( context, state) => MaterialPage( child: Container() ),
+                        redirect: 
+                            ( context, state ) 
                             {
-                                return FadeTransition( opacity: animation, child: child );
-                            }
-                            );
-                    }
-                    guards: [ requiresUserIsAuthenticated ],
-                    ),
-                GoRoute(
-                    path: '/user/property/:propertyId',
-                    pageBuilder: ( context, state )
-                    {
-                        final propertyId = state.params[ 'propertyId' ];
-                        return CustomTransitionPage(
-                            key: state.pageKey,
-                            child: UserPropertyEditionPage( propertyId: propertyId ),
-                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
-                            {
-                                return FadeTransition( opacity: animation, child: child );
-                            }
-                            );
-                    }
-                    guards: [ requiresUserIsAuthenticated ]
-                    )
-            ]
-        );
+                                if (!userIsAuthenticated) 
+                                {
+                                    return '/signin';
+                                }
+                                else
+                                {
+                                    return null;
+                                }
+                            },
+                        routes: [
+                            GoRoute(
+                                path: 'properties',
+                                pageBuilder: 
+                                    ( context, state )
+                                    {
+                                        return CustomTransitionPage(
+                                            key: state.pageKey,
+                                            child: UserPropertyListPage(),
+                                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                            {
+                                                return FadeTransition( opacity: animation, child: child );
+                                            }
+                                            );
+                                    },
+                                ),
+                            GoRoute(
+                                path: 'property/:propertyId',
+                                pageBuilder: 
+                                    ( context, state )
+                                    {
+                                        final propertyId = state.params[ 'propertyId' ];
+                                        return CustomTransitionPage(
+                                            key: state.pageKey,
+                                            child: UserPropertyEditionPage( propertyId: propertyId ),
+                                            transitionsBuilder: ( context, animation, secondaryAnimation, child )
+                                            {
+                                                return FadeTransition( opacity: animation, child: child );
+                                            }
+                                            );
+                                    }
+                                    )
+                            ]
+                        )
+                    ]
+            );

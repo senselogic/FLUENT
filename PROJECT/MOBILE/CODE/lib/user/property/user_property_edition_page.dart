@@ -13,14 +13,14 @@ class UserPropertyEditionPage
 {
     // -- ATTRIBUTES
 
-    final Property?
-        property;
+    later String
+        propertyId;
 
     // -- CONSTRUCTORS
 
     UserPropertyEditionPage(
         {
-            required this.property
+            required this.propertyId
         }
         );
 
@@ -40,6 +40,8 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
 
     final
         formKey = GlobalKey<FormState>();
+    late Property?
+        property;
     late TextEditingController
         titleController,
         descriptionController;

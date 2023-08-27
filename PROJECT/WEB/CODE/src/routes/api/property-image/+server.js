@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import { json } from '@sveltejs/kit';
-import { getDatabasePropertyImageArray } from '$lib/database/property_image';
+import { propertyImageService } from '$lib/service/property_image_service';
 
 // -- FUNCTIONS
 
@@ -9,7 +9,7 @@ export async function GET(
     { params }
     )
 {
-    let propertyImageArray = await getDatabasePropertyImageArray();
+    let propertyImageArray = await propertyImageService.getPropertyImageArray();
 
     return json( propertyImageArray );
 }

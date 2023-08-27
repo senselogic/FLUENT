@@ -2,7 +2,7 @@
 
 import { json } from '@sveltejs/kit';
 import { getRandomTuid } from 'senselogic-gist';
-import { getDatabasePropertyById, setDatabasePropertyById } from '$lib/database/property';
+import { propertyService } from '$lib/service/property_service';
 
 // -- FUNCTIONS
 
@@ -10,7 +10,7 @@ export async function GET(
     { params }
     )
 {
-    let property = await getDatabasePropertyById( params.propertyId );
+    let property = await propertyService.getPropertyById( params.propertyId );
 
     return json( property );
 }

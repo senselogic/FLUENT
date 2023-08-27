@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../property/property.dart';
 
 // -- TYPES
 
@@ -35,7 +36,7 @@ class PropertyDetailsPage extends StatefulWidget
 
 // ~~
 
-class_PropertyDetailsPageState extends State<PropertyDetailsPage>
+class PropertyDetailsPageState extends State<PropertyDetailsPage>
 {
     // -- ATTRIBUTES
 

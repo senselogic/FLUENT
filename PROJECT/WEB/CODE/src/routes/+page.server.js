@@ -1,13 +1,13 @@
 // -- IMPORTS
 
-import { getDatabasePropertyArray } from '$lib/database/property';
+import { propertyService } from '$lib/service/property_service';
 
 // -- FUNCTIONS
 
 export async function load(
     )
 {
-    let propertyArray = await getDatabasePropertyArray();
+    let propertyArray = await propertyService.getPropertyArray();
 
     return {
         propertyArray
