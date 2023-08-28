@@ -1,0 +1,1509 @@
+COUNTRY
+
+    id code name fullName continentCode
+
+        %ad-country
+            ~ AD
+            ~ Andorra
+            ~ Principality of Andorra
+            ~ EU
+
+        %ae-country
+            ~ AE
+            ~ United Arab Emirates
+            ~ United Arab Emirates
+            ~ AS
+
+        %af-country
+            ~ AF
+            ~ Afghanistan
+            ~ Islamic Republic of Afghanistan
+            ~ AS
+
+        %ag-country
+            ~ AG
+            ~ Antigua and Barbuda
+            ~ Antigua and Barbuda
+            ~ NA
+
+        %ai-country
+            ~ AI
+            ~ Anguilla
+            ~ Anguilla
+            ~ NA
+
+        %al-country
+            ~ AL
+            ~ Albania
+            ~ Republic of Albania
+            ~ EU
+
+        %am-country
+            ~ AM
+            ~ Armenia
+            ~ Republic of Armenia
+            ~ AS
+
+        %an-country
+            ~ AN
+            ~ Netherlands Antilles
+            ~ Netherlands Antilles
+            ~ NA
+
+        %ao-country
+            ~ AO
+            ~ Angola
+            ~ Republic of Angola
+            ~ AF
+
+        %aq-country
+            ~ AQ
+            ~ Antarctica
+            ~ Antarctica
+            ~ AN
+
+        %ar-country
+            ~ AR
+            ~ Argentina
+            ~ Argentine Republic
+            ~ SA
+
+        %as-country
+            ~ AS
+            ~ American Samoa
+            ~ American Samoa
+            ~ OC
+
+        %at-country
+            ~ AT
+            ~ Austria
+            ~ Republic of Austria
+            ~ EU
+
+        %au-country
+            ~ AU
+            ~ Australia
+            ~ Commonwealth of Australia
+            ~ OC
+
+        %aw-country
+            ~ AW
+            ~ Aruba
+            ~ Aruba
+            ~ NA
+
+        %ax-country
+            ~ AX
+            ~ Åland
+            ~ Åland Islands
+            ~ EU
+
+        %az-country
+            ~ AZ
+            ~ Azerbaijan
+            ~ Republic of Azerbaijan
+            ~ AS
+
+        %ba-country
+            ~ BA
+            ~ Bosnia and Herzegovina
+            ~ Bosnia and Herzegovina
+            ~ EU
+
+        %bb-country
+            ~ BB
+            ~ Barbados
+            ~ Barbados
+            ~ NA
+
+        %bd-country
+            ~ BD
+            ~ Bangladesh
+            ~ Peoples Republic of Bangladesh
+            ~ AS
+
+        %be-country
+            ~ BE
+            ~ Belgium
+            ~ Kingdom of Belgium
+            ~ EU
+
+        %bf-country
+            ~ BF
+            ~ Burkina Faso
+            ~ Burkina Faso
+            ~ AF
+
+        %bg-country
+            ~ BG
+            ~ Bulgaria
+            ~ Republic of Bulgaria
+            ~ EU
+
+        %bh-country
+            ~ BH
+            ~ Bahrain
+            ~ Kingdom of Bahrain
+            ~ AS
+
+        %bi-country
+            ~ BI
+            ~ Burundi
+            ~ Republic of Burundi
+            ~ AF
+
+        %bj-country
+            ~ BJ
+            ~ Benin
+            ~ Republic of Benin
+            ~ AF
+
+        %bl-country
+            ~ BL
+            ~ Saint Barthélemy
+            ~ Saint Barthelemy
+            ~ NA
+
+        %bm-country
+            ~ BM
+            ~ Bermuda
+            ~ Bermuda
+            ~ NA
+
+        %bn-country
+            ~ BN
+            ~ Brunei Darussalam
+            ~ Brunei Darussalam
+            ~ AS
+
+        %bo-country
+            ~ BO
+            ~ Bolivia
+            ~ Republic of Bolivia
+            ~ SA
+
+        %br-country
+            ~ BR
+            ~ Brazil
+            ~ Federative Republic of Brazil
+            ~ SA
+
+        %bs-country
+            ~ BS
+            ~ Bahamas
+            ~ Commonwealth of the Bahamas
+            ~ NA
+
+        %bt-country
+            ~ BT
+            ~ Bhutan
+            ~ Kingdom of Bhutan
+            ~ AS
+
+        %bv-country
+            ~ BV
+            ~ Bouvet Island
+            ~ Bouvet Island (Bouvetoya)
+            ~ AN
+
+        %bw-country
+            ~ BW
+            ~ Botswana
+            ~ Republic of Botswana
+            ~ AF
+
+        %by-country
+            ~ BY
+            ~ Belarus
+            ~ Republic of Belarus
+            ~ EU
+
+        %bz-country
+            ~ BZ
+            ~ Belize
+            ~ Belize
+            ~ NA
+
+        %ca-country
+            ~ CA
+            ~ Canada
+            ~ Canada
+            ~ NA
+
+        %cc-country
+            ~ CC
+            ~ Cocos (Keeling) Islands
+            ~ Cocos (Keeling) Islands
+            ~ AS
+
+        %cd-country
+            ~ CD
+            ~ Congo (Kinshasa)
+            ~ Democratic Republic of the Congo
+            ~ AF
+
+        %cf-country
+            ~ CF
+            ~ Central African Republic
+            ~ Central African Republic
+            ~ AF
+
+        %cg-country
+            ~ CG
+            ~ Congo (Brazzaville)
+            ~ Republic of the Congo
+            ~ AF
+
+        %ch-country
+            ~ CH
+            ~ Switzerland
+            ~ Swiss Confederation
+            ~ EU
+
+        %ci-country
+            ~ CI
+            ~ Côte dIvoire
+            ~ Republic of Cote dIvoire
+            ~ AF
+
+        %ck-country
+            ~ CK
+            ~ Cook Islands
+            ~ Cook Islands
+            ~ OC
+
+        %cl-country
+            ~ CL
+            ~ Chile
+            ~ Republic of Chile
+            ~ SA
+
+        %cm-country
+            ~ CM
+            ~ Cameroon
+            ~ Republic of Cameroon
+            ~ AF
+
+        %cn-country
+            ~ CN
+            ~ China
+            ~ Peoples Republic of China
+            ~ AS
+
+        %co-country
+            ~ CO
+            ~ Colombia
+            ~ Republic of Colombia
+            ~ SA
+
+        %cr-country
+            ~ CR
+            ~ Costa Rica
+            ~ Republic of Costa Rica
+            ~ NA
+
+        %cu-country
+            ~ CU
+            ~ Cuba
+            ~ Republic of Cuba
+            ~ NA
+
+        %cv-country
+            ~ CV
+            ~ Cape Verde
+            ~ Republic of Cape Verde
+            ~ AF
+
+        %cx-country
+            ~ CX
+            ~ Christmas Island
+            ~ Christmas Island
+            ~ AS
+
+        %cy-country
+            ~ CY
+            ~ Cyprus
+            ~ Republic of Cyprus
+            ~ AS
+
+        %cz-country
+            ~ CZ
+            ~ Czech Republic
+            ~ Czech Republic
+            ~ EU
+
+        %de-country
+            ~ DE
+            ~ Germany
+            ~ Federal Republic of Germany
+            ~ EU
+
+        %dj-country
+            ~ DJ
+            ~ Djibouti
+            ~ Republic of Djibouti
+            ~ AF
+
+        %dk-country
+            ~ DK
+            ~ Denmark
+            ~ Kingdom of Denmark
+            ~ EU
+
+        %dm-country
+            ~ DM
+            ~ Dominica
+            ~ Commonwealth of Dominica
+            ~ NA
+
+        %do-country
+            ~ DO
+            ~ Dominican Republic
+            ~ Dominican Republic
+            ~ NA
+
+        %dz-country
+            ~ DZ
+            ~ Algeria
+            ~ Peoples Democratic Republic of Algeria
+            ~ AF
+
+        %ec-country
+            ~ EC
+            ~ Ecuador
+            ~ Republic of Ecuador
+            ~ SA
+
+        %ee-country
+            ~ EE
+            ~ Estonia
+            ~ Republic of Estonia
+            ~ EU
+
+        %eg-country
+            ~ EG
+            ~ Egypt
+            ~ Arab Republic of Egypt
+            ~ AF
+
+        %eh-country
+            ~ EH
+            ~ Western Sahara
+            ~ Western Sahara
+            ~ AF
+
+        %er-country
+            ~ ER
+            ~ Eritrea
+            ~ State of Eritrea
+            ~ AF
+
+        %es-country
+            ~ ES
+            ~ Spain
+            ~ Kingdom of Spain
+            ~ EU
+
+        %et-country
+            ~ ET
+            ~ Ethiopia
+            ~ Federal Democratic Republic of Ethiopia
+            ~ AF
+
+        %fi-country
+            ~ FI
+            ~ Finland
+            ~ Republic of Finland
+            ~ EU
+
+        %fj-country
+            ~ FJ
+            ~ Fiji
+            ~ Republic of the Fiji Islands
+            ~ OC
+
+        %fk-country
+            ~ FK
+            ~ Falkland Islands
+            ~ Falkland Islands (Malvinas)
+            ~ SA
+
+        %fm-country
+            ~ FM
+            ~ Micronesia
+            ~ Federated States of Micronesia
+            ~ OC
+
+        %fo-country
+            ~ FO
+            ~ Faroe Islands
+            ~ Faroe Islands
+            ~ EU
+
+        %fr-country
+            ~ FR
+            ~ France
+            ~ French Republic
+            ~ EU
+
+        %ga-country
+            ~ GA
+            ~ Gabon
+            ~ Gabonese Republic
+            ~ AF
+
+        %gb-country
+            ~ GB
+            ~ United Kingdom
+            ~ United Kingdom of Great Britain & Northern Ireland
+            ~ EU
+
+        %gd-country
+            ~ GD
+            ~ Grenada
+            ~ Grenada
+            ~ NA
+
+        %ge-country
+            ~ GE
+            ~ Georgia
+            ~ Georgia
+            ~ AS
+
+        %gf-country
+            ~ GF
+            ~ French Guiana
+            ~ French Guiana
+            ~ SA
+
+        %gg-country
+            ~ GG
+            ~ Guernsey
+            ~ Bailiwick of Guernsey
+            ~ EU
+
+        %gh-country
+            ~ GH
+            ~ Ghana
+            ~ Republic of Ghana
+            ~ AF
+
+        %gi-country
+            ~ GI
+            ~ Gibraltar
+            ~ Gibraltar
+            ~ EU
+
+        %gl-country
+            ~ GL
+            ~ Greenland
+            ~ Greenland
+            ~ NA
+
+        %gm-country
+            ~ GM
+            ~ Gambia
+            ~ Republic of the Gambia
+            ~ AF
+
+        %gn-country
+            ~ GN
+            ~ Guinea
+            ~ Republic of Guinea
+            ~ AF
+
+        %gp-country
+            ~ GP
+            ~ Guadeloupe
+            ~ Guadeloupe
+            ~ NA
+
+        %gq-country
+            ~ GQ
+            ~ Equatorial Guinea
+            ~ Republic of Equatorial Guinea
+            ~ AF
+
+        %gr-country
+            ~ GR
+            ~ Greece
+            ~ Hellenic Republic Greece
+            ~ EU
+
+        %gs-country
+            ~ GS
+            ~ South Georgia and South Sandwich Islands
+            ~ South Georgia and the South Sandwich Islands
+            ~ AN
+
+        %gt-country
+            ~ GT
+            ~ Guatemala
+            ~ Republic of Guatemala
+            ~ NA
+
+        %gu-country
+            ~ GU
+            ~ Guam
+            ~ Guam
+            ~ OC
+
+        %gw-country
+            ~ GW
+            ~ Guinea-Bissau
+            ~ Republic of Guinea-Bissau
+            ~ AF
+
+        %gy-country
+            ~ GY
+            ~ Guyana
+            ~ Co-operative Republic of Guyana
+            ~ SA
+
+        %hk-country
+            ~ HK
+            ~ Hong Kong
+            ~ Hong Kong Special Administrative Region of China
+            ~ AS
+
+        %hm-country
+            ~ HM
+            ~ Heard and McDonald Islands
+            ~ Heard Island and McDonald Islands
+            ~ AN
+
+        %hn-country
+            ~ HN
+            ~ Honduras
+            ~ Republic of Honduras
+            ~ NA
+
+        %hr-country
+            ~ HR
+            ~ Croatia
+            ~ Republic of Croatia
+            ~ EU
+
+        %ht-country
+            ~ HT
+            ~ Haiti
+            ~ Republic of Haiti
+            ~ NA
+
+        %hu-country
+            ~ HU
+            ~ Hungary
+            ~ Republic of Hungary
+            ~ EU
+
+        %id-country
+            ~ ID
+            ~ Indonesia
+            ~ Republic of Indonesia
+            ~ AS
+
+        %ie-country
+            ~ IE
+            ~ Ireland
+            ~ Ireland
+            ~ EU
+
+        %il-country
+            ~ IL
+            ~ Israel
+            ~ State of Israel
+            ~ AS
+
+        %im-country
+            ~ IM
+            ~ Isle of Man
+            ~ Isle of Man
+            ~ EU
+
+        %in-country
+            ~ IN
+            ~ India
+            ~ Republic of India
+            ~ AS
+
+        %io-country
+            ~ IO
+            ~ British Indian Ocean Territory
+            ~ British Indian Ocean Territory (Chagos Archipelago)
+            ~ AS
+
+        %iq-country
+            ~ IQ
+            ~ Iraq
+            ~ Republic of Iraq
+            ~ AS
+
+        %ir-country
+            ~ IR
+            ~ Iran
+            ~ Islamic Republic of Iran
+            ~ AS
+
+        %is-country
+            ~ IS
+            ~ Iceland
+            ~ Republic of Iceland
+            ~ EU
+
+        %it-country
+            ~ IT
+            ~ Italy
+            ~ Italian Republic
+            ~ EU
+
+        %je-country
+            ~ JE
+            ~ Jersey
+            ~ Bailiwick of Jersey
+            ~ EU
+
+        %jm-country
+            ~ JM
+            ~ Jamaica
+            ~ Jamaica
+            ~ NA
+
+        %jo-country
+            ~ JO
+            ~ Jordan
+            ~ Hashemite Kingdom of Jordan
+            ~ AS
+
+        %jp-country
+            ~ JP
+            ~ Japan
+            ~ Japan
+            ~ AS
+
+        %ke-country
+            ~ KE
+            ~ Kenya
+            ~ Republic of Kenya
+            ~ AF
+
+        %kg-country
+            ~ KG
+            ~ Kyrgyzstan
+            ~ Kyrgyz Republic
+            ~ AS
+
+        %kh-country
+            ~ KH
+            ~ Cambodia
+            ~ Kingdom of Cambodia
+            ~ AS
+
+        %ki-country
+            ~ KI
+            ~ Kiribati
+            ~ Republic of Kiribati
+            ~ OC
+
+        %km-country
+            ~ KM
+            ~ Comoros
+            ~ Union of the Comoros
+            ~ AF
+
+        %kn-country
+            ~ KN
+            ~ Saint Kitts and Nevis
+            ~ Federation of Saint Kitts and Nevis
+            ~ NA
+
+        %kp-country
+            ~ KP
+            ~ Korea, North
+            ~ Democratic Peoples Republic of Korea
+            ~ AS
+
+        %kr-country
+            ~ KR
+            ~ Korea, South
+            ~ Republic of Korea
+            ~ AS
+
+        %kw-country
+            ~ KW
+            ~ Kuwait
+            ~ State of Kuwait
+            ~ AS
+
+        %ky-country
+            ~ KY
+            ~ Cayman Islands
+            ~ Cayman Islands
+            ~ NA
+
+        %kz-country
+            ~ KZ
+            ~ Kazakhstan
+            ~ Republic of Kazakhstan
+            ~ AS
+
+        %la-country
+            ~ LA
+            ~ Laos
+            ~ Lao Peoples Democratic Republic
+            ~ AS
+
+        %lb-country
+            ~ LB
+            ~ Lebanon
+            ~ Lebanese Republic
+            ~ AS
+
+        %lc-country
+            ~ LC
+            ~ Saint Lucia
+            ~ Saint Lucia
+            ~ NA
+
+        %li-country
+            ~ LI
+            ~ Liechtenstein
+            ~ Principality of Liechtenstein
+            ~ EU
+
+        %lk-country
+            ~ LK
+            ~ Sri Lanka
+            ~ Democratic Socialist Republic of Sri Lanka
+            ~ AS
+
+        %lr-country
+            ~ LR
+            ~ Liberia
+            ~ Republic of Liberia
+            ~ AF
+
+        %ls-country
+            ~ LS
+            ~ Lesotho
+            ~ Kingdom of Lesotho
+            ~ AF
+
+        %lt-country
+            ~ LT
+            ~ Lithuania
+            ~ Republic of Lithuania
+            ~ EU
+
+        %lu-country
+            ~ LU
+            ~ Luxembourg
+            ~ Grand Duchy of Luxembourg
+            ~ EU
+
+        %lv-country
+            ~ LV
+            ~ Latvia
+            ~ Republic of Latvia
+            ~ EU
+
+        %ly-country
+            ~ LY
+            ~ Libya
+            ~ Libyan Arab Jamahiriya
+            ~ AF
+
+        %ma-country
+            ~ MA
+            ~ Morocco
+            ~ Kingdom of Morocco
+            ~ AF
+
+        %mc-country
+            ~ MC
+            ~ Monaco
+            ~ Principality of Monaco
+            ~ EU
+
+        %md-country
+            ~ MD
+            ~ Moldova
+            ~ Republic of Moldova
+            ~ EU
+
+        %me-country
+            ~ ME
+            ~ Montenegro
+            ~ Republic of Montenegro
+            ~ EU
+
+        %mf-country
+            ~ MF
+            ~ Saint Martin (French part)
+            ~ Saint Martin
+            ~ NA
+
+        %mg-country
+            ~ MG
+            ~ Madagascar
+            ~ Republic of Madagascar
+            ~ AF
+
+        %mh-country
+            ~ MH
+            ~ Marshall Islands
+            ~ Republic of the Marshall Islands
+            ~ OC
+
+        %mk-country
+            ~ MK
+            ~ Macedonia
+            ~ Republic of Macedonia
+            ~ EU
+
+        %ml-country
+            ~ ML
+            ~ Mali
+            ~ Republic of Mali
+            ~ AF
+
+        %mm-country
+            ~ MM
+            ~ Myanmar
+            ~ Union of Myanmar
+            ~ AS
+
+        %mn-country
+            ~ MN
+            ~ Mongolia
+            ~ Mongolia
+            ~ AS
+
+        %mo-country
+            ~ MO
+            ~ Macau
+            ~ Macao Special Administrative Region of China
+            ~ AS
+
+        %mp-country
+            ~ MP
+            ~ Northern Mariana Islands
+            ~ Commonwealth of the Northern Mariana Islands
+            ~ OC
+
+        %mq-country
+            ~ MQ
+            ~ Martinique
+            ~ Martinique
+            ~ NA
+
+        %mr-country
+            ~ MR
+            ~ Mauritania
+            ~ Islamic Republic of Mauritania
+            ~ AF
+
+        %ms-country
+            ~ MS
+            ~ Montserrat
+            ~ Montserrat
+            ~ NA
+
+        %mt-country
+            ~ MT
+            ~ Malta
+            ~ Republic of Malta
+            ~ EU
+
+        %mu-country
+            ~ MU
+            ~ Mauritius
+            ~ Republic of Mauritius
+            ~ AF
+
+        %mv-country
+            ~ MV
+            ~ Maldives
+            ~ Republic of Maldives
+            ~ AS
+
+        %mw-country
+            ~ MW
+            ~ Malawi
+            ~ Republic of Malawi
+            ~ AF
+
+        %mx-country
+            ~ MX
+            ~ Mexico
+            ~ United Mexican States
+            ~ NA
+
+        %my-country
+            ~ MY
+            ~ Malaysia
+            ~ Malaysia
+            ~ AS
+
+        %mz-country
+            ~ MZ
+            ~ Mozambique
+            ~ Republic of Mozambique
+            ~ AF
+
+        %na-country
+            ~ NA
+            ~ Namibia
+            ~ Republic of Namibia
+            ~ AF
+
+        %nc-country
+            ~ NC
+            ~ New Caledonia
+            ~ New Caledonia
+            ~ OC
+
+        %ne-country
+            ~ NE
+            ~ Niger
+            ~ Republic of Niger
+            ~ AF
+
+        %nf-country
+            ~ NF
+            ~ Norfolk Island
+            ~ Norfolk Island
+            ~ OC
+
+        %ng-country
+            ~ NG
+            ~ Nigeria
+            ~ Federal Republic of Nigeria
+            ~ AF
+
+        %ni-country
+            ~ NI
+            ~ Nicaragua
+            ~ Republic of Nicaragua
+            ~ NA
+
+        %nl-country
+            ~ NL
+            ~ Netherlands
+            ~ Kingdom of the Netherlands
+            ~ EU
+
+        %no-country
+            ~ NO
+            ~ Norway
+            ~ Kingdom of Norway
+            ~ EU
+
+        %np-country
+            ~ NP
+            ~ Nepal
+            ~ State of Nepal
+            ~ AS
+
+        %nr-country
+            ~ NR
+            ~ Nauru
+            ~ Republic of Nauru
+            ~ OC
+
+        %nu-country
+            ~ NU
+            ~ Niue
+            ~ Niue
+            ~ OC
+
+        %nz-country
+            ~ NZ
+            ~ New Zealand
+            ~ New Zealand
+            ~ OC
+
+        %om-country
+            ~ OM
+            ~ Oman
+            ~ Sultanate of Oman
+            ~ AS
+
+        %pa-country
+            ~ PA
+            ~ Panama
+            ~ Republic of Panama
+            ~ NA
+
+        %pe-country
+            ~ PE
+            ~ Peru
+            ~ Republic of Peru
+            ~ SA
+
+        %pf-country
+            ~ PF
+            ~ French Polynesia
+            ~ French Polynesia
+            ~ OC
+
+        %pg-country
+            ~ PG
+            ~ Papua New Guinea
+            ~ Independent State of Papua New Guinea
+            ~ OC
+
+        %ph-country
+            ~ PH
+            ~ Philippines
+            ~ Republic of the Philippines
+            ~ AS
+
+        %pk-country
+            ~ PK
+            ~ Pakistan
+            ~ Islamic Republic of Pakistan
+            ~ AS
+
+        %pl-country
+            ~ PL
+            ~ Poland
+            ~ Republic of Poland
+            ~ EU
+
+        %pm-country
+            ~ PM
+            ~ Saint Pierre and Miquelon
+            ~ Saint Pierre and Miquelon
+            ~ NA
+
+        %pn-country
+            ~ PN
+            ~ Pitcairn
+            ~ Pitcairn Islands
+            ~ OC
+
+        %pr-country
+            ~ PR
+            ~ Puerto Rico
+            ~ Commonwealth of Puerto Rico
+            ~ NA
+
+        %ps-country
+            ~ PS
+            ~ Palestine
+            ~ Occupied Palestinian Territory
+            ~ AS
+
+        %pt-country
+            ~ PT
+            ~ Portugal
+            ~ Portuguese Republic
+            ~ EU
+
+        %pw-country
+            ~ PW
+            ~ Palau
+            ~ Republic of Palau
+            ~ OC
+
+        %py-country
+            ~ PY
+            ~ Paraguay
+            ~ Republic of Paraguay
+            ~ SA
+
+        %qa-country
+            ~ QA
+            ~ Qatar
+            ~ State of Qatar
+            ~ AS
+
+        %re-country
+            ~ RE
+            ~ Reunion
+            ~ Reunion
+            ~ AF
+
+        %ro-country
+            ~ RO
+            ~ Romania
+            ~ Romania
+            ~ EU
+
+        %rs-country
+            ~ RS
+            ~ Serbia
+            ~ Republic of Serbia
+            ~ EU
+
+        %ru-country
+            ~ RU
+            ~ Russian Federation
+            ~ Russian Federation
+            ~ EU
+
+        %rw-country
+            ~ RW
+            ~ Rwanda
+            ~ Republic of Rwanda
+            ~ AF
+
+        %sa-country
+            ~ SA
+            ~ Saudi Arabia
+            ~ Kingdom of Saudi Arabia
+            ~ AS
+
+        %sb-country
+            ~ SB
+            ~ Solomon Islands
+            ~ Solomon Islands
+            ~ OC
+
+        %sc-country
+            ~ SC
+            ~ Seychelles
+            ~ Republic of Seychelles
+            ~ AF
+
+        %sd-country
+            ~ SD
+            ~ Sudan
+            ~ Republic of Sudan
+            ~ AF
+
+        %se-country
+            ~ SE
+            ~ Sweden
+            ~ Kingdom of Sweden
+            ~ EU
+
+        %sg-country
+            ~ SG
+            ~ Singapore
+            ~ Republic of Singapore
+            ~ AS
+
+        %sh-country
+            ~ SH
+            ~ Saint Helena
+            ~ Saint Helena
+            ~ AF
+
+        %si-country
+            ~ SI
+            ~ Slovenia
+            ~ Republic of Slovenia
+            ~ EU
+
+        %sj-country
+            ~ SJ
+            ~ Svalbard and Jan Mayen Islands
+            ~ Svalbard & Jan Mayen Islands
+            ~ EU
+
+        %sk-country
+            ~ SK
+            ~ Slovakia
+            ~ Slovakia (Slovak Republic)
+            ~ EU
+
+        %sl-country
+            ~ SL
+            ~ Sierra Leone
+            ~ Republic of Sierra Leone
+            ~ AF
+
+        %sm-country
+            ~ SM
+            ~ San Marino
+            ~ Republic of San Marino
+            ~ EU
+
+        %sn-country
+            ~ SN
+            ~ Senegal
+            ~ Republic of Senegal
+            ~ AF
+
+        %so-country
+            ~ SO
+            ~ Somalia
+            ~ Somali Republic
+            ~ AF
+
+        %sr-country
+            ~ SR
+            ~ Suriname
+            ~ Republic of Suriname
+            ~ SA
+
+        %st-country
+            ~ ST
+            ~ Sao Tome and Principe
+            ~ Democratic Republic of Sao Tome and Principe
+            ~ AF
+
+        %sv-country
+            ~ SV
+            ~ El Salvador
+            ~ Republic of El Salvador
+            ~ NA
+
+        %sy-country
+            ~ SY
+            ~ Syria
+            ~ Syrian Arab Republic
+            ~ AS
+
+        %sz-country
+            ~ SZ
+            ~ Swaziland
+            ~ Kingdom of Swaziland
+            ~ AF
+
+        %tc-country
+            ~ TC
+            ~ Turks and Caicos Islands
+            ~ Turks and Caicos Islands
+            ~ NA
+
+        %td-country
+            ~ TD
+            ~ Chad
+            ~ Republic of Chad
+            ~ AF
+
+        %tf-country
+            ~ TF
+            ~ French Southern Lands
+            ~ French Southern Territories
+            ~ AN
+
+        %tg-country
+            ~ TG
+            ~ Togo
+            ~ Togolese Republic
+            ~ AF
+
+        %th-country
+            ~ TH
+            ~ Thailand
+            ~ Kingdom of Thailand
+            ~ AS
+
+        %tj-country
+            ~ TJ
+            ~ Tajikistan
+            ~ Republic of Tajikistan
+            ~ AS
+
+        %tk-country
+            ~ TK
+            ~ Tokelau
+            ~ Tokelau
+            ~ OC
+
+        %tl-country
+            ~ TL
+            ~ Timor-Leste
+            ~ Democratic Republic of Timor-Leste
+            ~ AS
+
+        %tm-country
+            ~ TM
+            ~ Turkmenistan
+            ~ Turkmenistan
+            ~ AS
+
+        %tn-country
+            ~ TN
+            ~ Tunisia
+            ~ Tunisian Republic
+            ~ AF
+
+        %to-country
+            ~ TO
+            ~ Tonga
+            ~ Kingdom of Tonga
+            ~ OC
+
+        %tr-country
+            ~ TR
+            ~ Turkey
+            ~ Republic of Turkey
+            ~ AS
+
+        %tt-country
+            ~ TT
+            ~ Trinidad and Tobago
+            ~ Republic of Trinidad and Tobago
+            ~ NA
+
+        %tv-country
+            ~ TV
+            ~ Tuvalu
+            ~ Tuvalu
+            ~ OC
+
+        %tw-country
+            ~ TW
+            ~ Taiwan
+            ~ Taiwan
+            ~ AS
+
+        %tz-country
+            ~ TZ
+            ~ Tanzania
+            ~ United Republic of Tanzania
+            ~ AF
+
+        %ua-country
+            ~ UA
+            ~ Ukraine
+            ~ Ukraine
+            ~ EU
+
+        %ug-country
+            ~ UG
+            ~ Uganda
+            ~ Republic of Uganda
+            ~ AF
+
+        %um-country
+            ~ UM
+            ~ United States Minor Outlying Islands
+            ~ United States Minor Outlying Islands
+            ~ OC
+
+        %us-country
+            ~ US
+            ~ United States of America
+            ~ United States of America
+            ~ NA
+
+        %uy-country
+            ~ UY
+            ~ Uruguay
+            ~ Eastern Republic of Uruguay
+            ~ SA
+
+        %uz-country
+            ~ UZ
+            ~ Uzbekistan
+            ~ Republic of Uzbekistan
+            ~ AS
+
+        %va-country
+            ~ VA
+            ~ Vatican City
+            ~ Holy See (Vatican City State)
+            ~ EU
+
+        %vc-country
+            ~ VC
+            ~ Saint Vincent and the Grenadines
+            ~ Saint Vincent and the Grenadines
+            ~ NA
+
+        %ve-country
+            ~ VE
+            ~ Venezuela
+            ~ Bolivarian Republic of Venezuela
+            ~ SA
+
+        %vg-country
+            ~ VG
+            ~ Virgin Islands, British
+            ~ British Virgin Islands
+            ~ NA
+
+        %vi-country
+            ~ VI
+            ~ Virgin Islands, U.S.
+            ~ United States Virgin Islands
+            ~ NA
+
+        %vn-country
+            ~ VN
+            ~ Vietnam
+            ~ Socialist Republic of Vietnam
+            ~ AS
+
+        %vu-country
+            ~ VU
+            ~ Vanuatu
+            ~ Republic of Vanuatu
+            ~ OC
+
+        %wf-country
+            ~ WF
+            ~ Wallis and Futuna Islands
+            ~ Wallis and Futuna
+            ~ OC
+
+        %ws-country
+            ~ WS
+            ~ Samoa
+            ~ Independent State of Samoa
+            ~ OC
+
+        %ye-country
+            ~ YE
+            ~ Yemen
+            ~ Yemen
+            ~ AS
+
+        %yt-country
+            ~ YT
+            ~ Mayotte
+            ~ Mayotte
+            ~ AF
+
+        %za-country
+            ~ ZA
+            ~ South Africa
+            ~ Republic of South Africa
+            ~ AF
+
+        %zm-country
+            ~ ZM
+            ~ Zambia
+            ~ Republic of Zambia
+            ~ AF
+
+        %zw-country
+            ~ ZW
+            ~ Zimbabwe
+            ~ Republic of Zimbabwe
+            ~ AF
+
+        %bq-country
+            ~ BQ
+            ~ Bonaire
+            ~ Bonaire, Sint Eustatius and Saba
+            ~ NA
+
+        %cw-country
+            ~ CW
+            ~ Curaçao
+            ~ Curaçao
+            ~ NA
+
+        %ss-country
+            ~ SS
+            ~ South Sudan
+            ~ South Sudan
+            ~ AF
+
+        %sx-country
+            ~ SX
+            ~ Sint Maarten
+            ~ Sint Maarten (Dutch part)
+            ~ NA
+
+        %xk-country
+            ~ XK
+            ~ Kosovo
+            ~ Kosovo
+            ~ EU

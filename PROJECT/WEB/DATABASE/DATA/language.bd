@@ -1,0 +1,13 @@
+LANGUAGE
+
+    id number code name
+
+        %en-language
+            ~ 1
+            ~ en
+            ~ English
+
+        %fr-language
+            ~ 2
+            ~ fr
+            ~ French

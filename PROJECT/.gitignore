@@ -1,3 +1,3 @@
-define_database.bat
 MOBILE/CODE/lib/database/constant.dart
+WEB/define_database.bat
 WEB/DATABASE/*.sql

@@ -1,5 +1,14 @@
 public
 
+    LANGUAGE | dropped
+
+        id : TUID | key, unique
+        number : FLOAT64
+        code : STRING
+        name : STRING
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
     CONTINENT | dropped
 
         id : TUID | key, unique
