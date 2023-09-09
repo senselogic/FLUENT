@@ -30,7 +30,7 @@
         <div class="property">
             <img class="property-image" src="{ property.imagePath }"/>
             <div class="property-title">
-                <a href="/property/{ property.id }">{ property.title }</a>
+                <a class="color-green-500" href="/property/{ property.id }">{ property.title }</a>
             </div>
         </div>
     { /each }
