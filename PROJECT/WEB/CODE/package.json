@@ -29,6 +29,6 @@
     "dependencies": {
         "@supabase/supabase-js": "^2.33.1",
         "senselogic-flow": "^0.0.7",
-        "senselogic-gist": "^0.1.47"
+        "senselogic-gist": "^2.0.0"
     }
 }
