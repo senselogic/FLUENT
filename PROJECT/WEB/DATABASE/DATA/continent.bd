@@ -1,31 +1,24 @@
 CONTINENT
 
-    id code name
+    id name
 
-        %af-continent
-            ~ AF
+        AF
             ~ Africa
 
-        %an-continent
-            ~ AN
+        AN
             ~ Antarctica
 
-        %as-continent
-            ~ AS
+        AS
             ~ Asia
 
-        %eu-continent
-            ~ EU
+        EU
             ~ Europe
 
-        %na-continent
-            ~ NA
+        NA
             ~ North America
 
-        %oc-continent
-            ~ OC
+        OC
             ~ Oceania
 
-        %sa-continent
-            ~ SA
+        SA
             ~ South America

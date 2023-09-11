@@ -1,13 +1,11 @@
 LANGUAGE
 
-    id number code name
+    id number name
 
-        %en-language
+        en
             ~ 1
-            ~ en
             ~ English
 
-        %fr-language
+        fr
             ~ 2
-            ~ fr
             ~ French
