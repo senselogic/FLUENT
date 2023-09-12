@@ -5,9 +5,7 @@ import { createClient } from '@supabase/supabase-js';
 // -- CONSTANTS
 
 export let
-    databaseName = 'public',
-    databaseTablePrefix = '',
-    databaseEmailPrefix = '';
+    databaseName = 'public';
 
 // -- STATEMENTS
 

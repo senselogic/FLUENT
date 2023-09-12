@@ -1,12 +1,14 @@
 // -- IMPORTS
 
 import { printError } from 'senselogic-gist';
-import { database, databaseName, databaseTablePrefix } from '$lib/database';
+import { database } from '$lib/database';
 
-// -- FUNCTIONS
+// -- TYPES
 
 class PropertyService
 {
+    // -- INQUIRIES
+
     async getPropertyByIdMap(
         propertyArray
         )
@@ -47,7 +49,7 @@ class PropertyService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY' )
+                  .from( 'PROPERTY' )
                   .select()
                   .order( 'number' );
 
@@ -69,7 +71,7 @@ class PropertyService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY' )
+                  .from( 'PROPERTY' )
                   .select()
                   .eq( 'id', propertyId );
 
@@ -88,7 +90,7 @@ class PropertyService
         }
     }
 
-    // ~~
+    // -- OPERATIONS
 
     async addProperty(
         property
@@ -96,7 +98,7 @@ class PropertyService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY' )
+                  .from( 'PROPERTY' )
                   .insert( property );
 
         if ( error !== null )
@@ -116,7 +118,7 @@ class PropertyService
     {
         const { data, error }
             = await database
-                .from( databaseTablePrefix + 'PROPERTY' )
+                .from( 'PROPERTY' )
                 .update( property )
                 .eq( 'id', propertyId );
 
@@ -136,7 +138,7 @@ class PropertyService
     {
         const { data, error }
             = await database
-                .from( databaseTablePrefix + 'PROPERTY' )
+                .from( 'PROPERTY' )
                 .delete()
                 .eq( 'id', propertyId );
 

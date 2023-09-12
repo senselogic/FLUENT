@@ -28,7 +28,7 @@
 <div class="property-list">
     <div class="property">
         <div class="property-title">
-            { data.property.title }
+            { getLocalizedText( data.property.title ) }
         </div>
         <div class="property-image-list">
             { #each data.propertyImageArray as propertyImage }
@@ -45,6 +45,8 @@
 </div>
 
 <script>
+    import { getLocalizedText } from 'senselogic-gist';
+
     export let data;
 </script>
 

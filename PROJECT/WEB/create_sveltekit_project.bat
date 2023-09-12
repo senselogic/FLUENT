@@ -4,6 +4,6 @@ rename fluent-project CODE
 cd CODE
 call npm install --global yarn
 call yarn install
-call yarn add senselogic-flow senselogic-gist @supabase/supabase-js
+call yarn add cookie senselogic-flow senselogic-gist @supabase/supabase-js
 call yarn audit
 pause

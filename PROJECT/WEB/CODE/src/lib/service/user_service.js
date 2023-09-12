@@ -1,12 +1,14 @@
 // -- IMPORTS
 
 import { printError } from 'senselogic-gist';
-import { database, databaseName, databaseEmailPrefix } from '$lib/database';
+import { database } from '$lib/database';
 
-// -- FUNCTIONS
+// -- TYPES
 
 class UserService
 {
+    // -- OPERATIONS
+
     async signUpUser(
         email,
         password
@@ -15,7 +17,7 @@ class UserService
         const { user, error }
             = await supabase.auth.signUp(
                   {
-                      email: databaseEmailPrefix + email,
+                      email,
                       password
                   }
                   );
@@ -38,7 +40,7 @@ class UserService
         const { user, error }
             = await supabase.auth.signIn(
                   {
-                      email: databaseEmailPrefix + email,
+                      email,
                       password
                   }
                   );
@@ -53,7 +55,7 @@ class UserService
 
     // ~~
 
-    async signOut(
+    async signOutUser(
         )
     {
         const { error }

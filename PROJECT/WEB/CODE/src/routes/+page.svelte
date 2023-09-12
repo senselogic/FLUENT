@@ -30,13 +30,15 @@
         <div class="property">
             <img class="property-image" src="{ property.imagePath }"/>
             <div class="property-title">
-                <a class="color-green-500" href="/property/{ property.id }">{ property.title }</a>
+                <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
             </div>
         </div>
     { /each }
 </div>
 
 <script>
+    import { getLocalizedText } from 'senselogic-gist';
+
     export let data;
 </script>
 

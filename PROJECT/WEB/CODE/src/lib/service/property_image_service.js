@@ -1,18 +1,20 @@
 // -- IMPORTS
 
 import { printError } from 'senselogic-gist';
-import { database, databaseName, databaseTablePrefix } from '$lib/database';
+import { database } from '$lib/database';
 
-// -- CLASSES
+// -- TYPES
 
 class PropertyImageService
 {
+    // -- INQUIRIES
+
     async getPropertyImageArray(
         )
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .select()
                   .order( 'number' );
 
@@ -32,7 +34,7 @@ class PropertyImageService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .select()
                   .eq( 'propertyId', propertyImageId )
                   .order( 'number' );
@@ -53,7 +55,7 @@ class PropertyImageService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .select()
                   .eq( 'id', propertyImageId );
 
@@ -72,7 +74,7 @@ class PropertyImageService
         }
     }
 
-    // ~~
+    // -- OPERATIONS
 
     async addPropertyImage(
         propertyImage
@@ -80,7 +82,7 @@ class PropertyImageService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .insert( propertyImage );
 
         if ( error !== null )
@@ -100,7 +102,7 @@ class PropertyImageService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .update( propertyImage )
                   .eq( 'id', propertyImageId );
 
@@ -120,7 +122,7 @@ class PropertyImageService
     {
         const { data, error }
             = await database
-                  .from( databaseTablePrefix + 'PROPERTY_IMAGE' )
+                  .from( 'PROPERTY_IMAGE' )
                   .delete()
                   .eq( 'id', propertyImageId );
 
