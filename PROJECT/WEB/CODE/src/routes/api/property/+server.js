@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import { json } from '@sveltejs/kit';
-import { propertyService } from '$lib/service/property_service';
+import { propertyService } from '$lib/property/property_service';
 
 // -- FUNCTIONS
 

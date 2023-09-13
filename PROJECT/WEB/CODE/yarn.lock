@@ -303,9 +303,9 @@
     import-meta-resolve "^3.0.0"
 
 "@sveltejs/kit@^1.20.4":
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.24.1.tgz#ec9aa74ebde06b24db9ad629a62771fbd3b1c747"
-  integrity sha512-u2FO0q62Se9UZ0g9kXaWYi+54vTK70BKaPScOcx6jLMRou4CUZgDTNKnRhsbJgPMgaLkOH0j3o/fKlZ6jBfgSg==
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.25.0.tgz#b04894d45526c4170cb21769042d0188ffd4bc72"
+  integrity sha512-+VqMWJJYtcLoF8hYkdqY2qs/MPaawrMwA/gNBJW2o2UrcuYdNiy0ZZnjQQuPD33df/VcAulnoeyzF5ZtaajFEw==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^2.4.1"
     "@types/cookie" "^0.5.1"
@@ -1572,9 +1572,9 @@ senselogic-flow@^0.0.7:
   integrity sha512-oH5wlsfxCq1ozglazhJPaqqa2sqmvIO99g6+gHAIBuShE3Y7zoFII6pHLH1sgJcfjgxAOQH0xEJFZNvA6o4hSw==
 
 senselogic-gist@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.1.tgz#092d3e50d1d781d3896be4fff7c4ef4f50c62b67"
-  integrity sha512-d28Mhn8PM70hFlg4VWt9hMOfKUtg0p5bpH9385mWulZzGhVrv7wcHEwF+bNp1hfBID2qcIWclp0RgIHHnxkQJw==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.2.tgz#4d3bf5e73593c131af301e9a596ca0b667b3ac04"
+  integrity sha512-Q1Mm9OXOCK7CxquaHwHEMSNqIC2/HgZSHbhJT5GepeegSxs2xOicwCV89YFazJLbdJ1pUaN5hUFhJiPzQ2f4LQ==
   dependencies:
     md5 "^2.3.0"
 

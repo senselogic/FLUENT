@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { propertyService } from '$lib/service/property_service';
+import { propertyService } from '$lib/property/property_service';
 
 // -- FUNCTIONS
 
