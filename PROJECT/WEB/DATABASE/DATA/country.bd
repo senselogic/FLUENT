@@ -1,6 +1,6 @@
 COUNTRY
 
-    id name fullName continentId
+    code name fullName continentCode
 
         AD
             ~ Andorra

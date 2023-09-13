@@ -1,6 +1,6 @@
 CONTINENT
 
-    id name
+    code name
 
         AF
             ~ Africa

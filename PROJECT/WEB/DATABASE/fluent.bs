@@ -2,7 +2,7 @@ public
 
     LANGUAGE | dropped
 
-        id : STRING | key, unique
+        code : STRING | key, unique
         number : FLOAT64
         name : STRING
         creationTimestamp : TIMESTAMP | generated
@@ -10,17 +10,17 @@ public
 
     CONTINENT | dropped
 
-        id : STRING | key, unique
+        code : STRING | key, unique
         name : STRING
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
     COUNTRY | dropped
 
-        id : STRING | key, unique
+        code : STRING | key, unique
         name : STRING
         fullName : STRING
-        continentId : CONTINENT.id
+        continentCode : CONTINENT.code
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
@@ -31,7 +31,7 @@ public
         lastName : STRING
         email : STRING
         phoneNumber : STRING
-        countryId : COUNTRY.id
+        countryCode : COUNTRY.code
         imagePath : STRING = "/image/profile/profile_{{integer 1 20}}.jpg"
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
@@ -46,16 +46,15 @@ public
         description : STRING = "{{latin 5 10 8 16}}¨fr:{{latin 5 10 8 16}}"
         price : FLOAT64
         imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg"
+        imagePathList : LIST[ IMAGE.path ] | count 5
         userProfileId : USER_PROFILE.id | linked auth.users
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
-    PROPERTY_IMAGE | dropped, count 80
+    IMAGE | dropped, count 16
 
-        id : TUID | key, unique
-        number : FLOAT64
+        path : STRING = "/image/property/inside_{{integer 1 16}}.jpg" | key, unique
         propertyId : PROPERTY.id
-        imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg|/image/property/inside_{{integer 1 16}}.jpg"
         userProfileId : USER_PROFILE.id | linked auth.users
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated

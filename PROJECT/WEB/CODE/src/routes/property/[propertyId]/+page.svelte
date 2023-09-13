@@ -31,9 +31,9 @@
             { getLocalizedText( data.property.title ) }
         </div>
         <div class="property-image-list">
-            { #each data.propertyImageArray as propertyImage }
+            { #each data.imageArray as image }
                 <div class="property-image-container">
-                    <img class="property-image" src="{ propertyImage.imagePath }"/>
+                    <img class="property-image" src="{ image.imagePath }"/>
                 </div>
             { /each }
         </div>

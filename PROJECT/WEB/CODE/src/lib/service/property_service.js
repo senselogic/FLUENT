@@ -28,14 +28,14 @@ class PropertyService
 
     async getInflatedPropertyArray(
         propertyArray,
-        propertyImageArray
+        imageArray
         )
     {
         const propertyByIdMap = getPropertyByIdMap( propertyArray );
 
-        for ( const propertyImage of propertyImageArray )
+        for ( const image of imageArray )
         {
-            propertyByIdMap[ propertyImage.propertyId ].imageArray.push( propertyImage );
+            propertyByIdMap[ image.propertyId ].imageArray.push( image );
         }
 
         return propertyArray;
@@ -44,7 +44,7 @@ class PropertyService
     // ~~
 
     async getPropertyArray(
-        propertyImageArray
+        imageArray
         )
     {
         const { data, error }
@@ -55,9 +55,9 @@ class PropertyService
 
         let propertyArray = data ?? [];
 
-        if ( propertyImageArray !== undefined )
+        if ( imageArray !== undefined )
         {
-            propertyArray = getInflatedPropertyArray( propertyArray, propertyImageArray );
+            propertyArray = getInflatedPropertyArray( propertyArray, imageArray );
         }
 
         return propertyArray;

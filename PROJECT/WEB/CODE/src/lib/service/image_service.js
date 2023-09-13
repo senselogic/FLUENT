@@ -5,11 +5,11 @@ import { database } from '$lib/database';
 
 // -- TYPES
 
-class PropertyImageService
+class ImageService
 {
     // -- INQUIRIES
 
-    async getPropertyImageArray(
+    async getImageArray(
         )
     {
         const { data, error }
@@ -28,15 +28,15 @@ class PropertyImageService
 
     // ~~
 
-    async getPropertyImageArrayByPropertyId(
-        propertyImageId
+    async getImageArrayByPropertyId(
+        imageId
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
                   .select()
-                  .eq( 'propertyId', propertyImageId )
+                  .eq( 'propertyId', imageId )
                   .order( 'number' );
 
         if ( error !== null )
@@ -49,15 +49,15 @@ class PropertyImageService
 
     // ~~
 
-    async getPropertyImageById(
-        propertyImageId
+    async getImageById(
+        imageId
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
                   .select()
-                  .eq( 'id', propertyImageId );
+                  .eq( 'id', imageId );
 
         if ( error !== null )
         {
@@ -76,14 +76,14 @@ class PropertyImageService
 
     // -- OPERATIONS
 
-    async addPropertyImage(
-        propertyImage
+    async addImage(
+        image
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
-                  .insert( propertyImage );
+                  .insert( image );
 
         if ( error !== null )
         {
@@ -95,16 +95,16 @@ class PropertyImageService
 
     // ~~
 
-    async setPropertyImageById(
-        propertyImage,
-        propertyImageId
+    async setImageById(
+        image,
+        imageId
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
-                  .update( propertyImage )
-                  .eq( 'id', propertyImageId );
+                  .update( image )
+                  .eq( 'id', imageId );
 
         if ( error !== null )
         {
@@ -116,15 +116,15 @@ class PropertyImageService
 
     // ~~
 
-    async removePropertyImageById(
-        propertyImageId
+    async removeImageById(
+        imageId
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
                   .delete()
-                  .eq( 'id', propertyImageId );
+                  .eq( 'id', imageId );
 
         if ( error !== null )
         {
@@ -137,5 +137,5 @@ class PropertyImageService
 
 // -- VARIABLES
 
-export const propertyImageService
-    = new PropertyImageService();
+export const imageService
+    = new ImageService();

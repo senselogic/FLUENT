@@ -1,6 +1,6 @@
 LANGUAGE
 
-    id number name
+    code number name
 
         en
             ~ 1
