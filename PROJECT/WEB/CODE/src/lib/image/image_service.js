@@ -15,8 +15,7 @@ class ImageService
         const { data, error }
             = await database
                   .from( 'PROPERTY_IMAGE' )
-                  .select()
-                  .order( 'number' );
+                  .select();
 
         if ( error !== null )
         {
@@ -36,8 +35,7 @@ class ImageService
             = await database
                   .from( 'PROPERTY_IMAGE' )
                   .select()
-                  .eq( 'propertyId', imageId )
-                  .order( 'number' );
+                  .eq( 'propertyId', imageId );
 
         if ( error !== null )
         {

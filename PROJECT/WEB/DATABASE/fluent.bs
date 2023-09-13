@@ -46,7 +46,7 @@ public
         description : STRING = "{{latin 5 10 8 16}}¨fr:{{latin 5 10 8 16}}"
         price : FLOAT64
         imagePath : STRING = "/image/property/outside_{{integer 1 8}}.jpg"
-        imagePathList : LIST[ IMAGE.path ] | count 5
+        imagePathArray : LIST[ IMAGE.path ] | count 5
         userProfileId : USER_PROFILE.id | linked auth.users
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated

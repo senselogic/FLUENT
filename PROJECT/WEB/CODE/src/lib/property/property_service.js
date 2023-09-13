@@ -26,23 +26,6 @@ class PropertyService
 
     // ~~
 
-    async getInflatedPropertyArray(
-        propertyArray,
-        imageArray
-        )
-    {
-        const propertyByIdMap = getPropertyByIdMap( propertyArray );
-
-        for ( const image of imageArray )
-        {
-            propertyByIdMap[ image.propertyId ].imageArray.push( image );
-        }
-
-        return propertyArray;
-    }
-
-    // ~~
-
     async getPropertyArray(
         imageArray
         )
@@ -53,14 +36,7 @@ class PropertyService
                   .select()
                   .order( 'number' );
 
-        let propertyArray = data ?? [];
-
-        if ( imageArray !== undefined )
-        {
-            propertyArray = getInflatedPropertyArray( propertyArray, imageArray );
-        }
-
-        return propertyArray;
+        return data;
     }
 
     // ~~
