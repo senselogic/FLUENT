@@ -31,7 +31,7 @@
             { getLocalizedText( data.property.title ) }
         </div>
         <div class="property-image-list">
-            { #each JSON.parse( data.property.imagePathArray ) as imagePath }
+            { #each data.property.imagePathArray as imagePath }
                 <div class="property-image-container">
                     <img class="property-image" src="{ imagePath }"/>
                 </div>
@@ -48,7 +48,4 @@
     import { getLocalizedText } from 'senselogic-gist';
 
     export let data;
-
-    console.log( data );
 </script>
-

@@ -27,9 +27,7 @@ export async function getSession(
     request
     )
 {
-    return (
-        {
-            user: request.locals.user
-        }
-        );
+    return {
+        user: request.locals.user
+        };
 }
