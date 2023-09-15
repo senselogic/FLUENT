@@ -1,7 +1,6 @@
 // -- IMPORTS
 
 import 'package:bloc/bloc.dart';
-import 'property.dart';
 import 'property_list_store_state.dart';
 import 'property_service.dart';
 
@@ -18,30 +17,13 @@ class PropertyListStore
 
     // -- OPERATIONS
 
-    Future<void> getPropertyList(
+    Future<void> fetch(
         ) async
     {
         try
         {
             emit( PropertyListStoreLoadingState() );
             final propertyList = await propertyService.getPropertyList();
-            emit( PropertyListStoreLoadedState( propertyList: propertyList ) );
-        }
-        catch ( exception )
-        {
-            emit( PropertyListStoreErrorState( error: exception.toString() ) );
-        }
-    }
-
-    // ~~
-
-    Future <void> getUserPropertyList(
-        ) async
-    {
-        try
-        {
-            emit( PropertyListStoreLoadingState() );
-            final propertyList = await propertyService.getUserPropertyList();
             emit( PropertyListStoreLoadedState( propertyList: propertyList ) );
         }
         catch ( exception )

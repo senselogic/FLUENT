@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import '../database/database.dart';
-import 'userProfile.dart';
+import 'user_profile.dart';
 
 // -- TYPES
 
@@ -9,13 +9,15 @@ class UserProfileService
 {
     // -- INQUIRIES
 
-    Future<UserProfile> getUserProfileById(
-        String
+    Future<UserProfile> getUserProfile(
         ) async
     {
-        final response = await database.from( 'USER_PROFILE' ).select().execute();
+        final userId = database.auth.currentUser?.id;
+        final response = await database.from( 'USER_PROFILE' ).select().eq( 'userId', userId );
 
-        return response.data.map( ( map ) => UserProfile.fromMap( map ) ).toList().cast<UserProfile>();
+        userProfile = response.data.map( ( map ) => UserProfile.fromMap( map ) ).toList().cast<UserProfile>();
+
+        return userProfile;
     }
 }
 
@@ -23,5 +25,5 @@ class UserProfileService
 
 final
     userProfileService = UserProfileService();
-final
+late UserProfile
     userProfile;

@@ -5,17 +5,32 @@ class Property
     // -- ATTRIBUTES
 
     final String
-        id,
+        id;
+    final double 
+        number;
+    final String 
+        city,
+        country,
         title,
-        description;
+        description,
+        price,
+        imagePath;
+    final List<String> 
+        imagePathArray;
 
     // -- CONSTRUCTORS
 
     Property(
         {
             required this.id,
+            required this.number,
+            required this.city,
+            required this.country,
             required this.title,
-            required this.description
+            required this.description,
+            required this.price,
+            required this.imagePath,
+            required this.imagePathArray,
         }
         );
 
@@ -27,8 +42,14 @@ class Property
     {
         return Property(
             id: map[ 'id' ],
+            number: map[ 'number' ],
+            city: map[ 'city' ],
+            country: map[ 'country' ],
             title: map[ 'title' ],
-            description: map[ 'description' ]
+            description: map[ 'description' ],
+            price: map[ 'price' ],
+            imagePath: map[ 'imagePath' ],
+            imagePathArray: List<String>.from( map[ 'imagePathArray' ] )
             );
     }
 
@@ -39,9 +60,15 @@ class Property
     {
         return
             {
-                "id": id,
-                "title": title,
-                "description": description
+                'id': id,
+                'number': number,
+                'city': city,
+                'country': country,
+                'title': title,
+                'description': description,
+                'price': price,
+                'imagePath': imagePath,
+                'imagePathArray': imagePathArray
             };
     }
 }

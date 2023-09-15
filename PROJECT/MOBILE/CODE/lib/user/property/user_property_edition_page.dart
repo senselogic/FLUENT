@@ -1,10 +1,8 @@
 // -- IMPORTS
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-import 'property_service.dart';
-import 'user_service.dart';
+import '../../property/property.dart';
+import 'user_property_edition_store.dart';
 
 // -- TYPES
 
@@ -13,13 +11,14 @@ class UserPropertyEditionPage
 {
     // -- ATTRIBUTES
 
-    later String
+    final String
         propertyId;
 
     // -- CONSTRUCTORS
 
-    UserPropertyEditionPage(
+    const UserPropertyEditionPage(
         {
+            super.key, 
             required this.propertyId
         }
         );
@@ -38,6 +37,8 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
 {
     // -- ATTRIBUTES
 
+    late final UserPropertyEditionStore
+        userPropertyEditionStore;
     final
         formKey = GlobalKey<FormState>();
     late Property?
@@ -54,8 +55,11 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
     {
         super.initState();
 
-        titleController = TextEditingController( text: widget.property?.title ?? "" );
-        descriptionController = TextEditingController( text: widget.property?.description ?? "" );
+        userPropertyEditionStore = UserPropertyEditionStore();
+        userPropertyEditionStore.fetch( widget.propertyId );
+
+        titleController = TextEditingController( text: property?.title ?? "" );
+        descriptionController = TextEditingController( text: property?.description ?? "" );
     }
 
     // ~~
@@ -64,7 +68,7 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
     Widget build( BuildContext context )
     {
         return Scaffold(
-            appBar: AppBar( title: Text( widget.property == null ? 'Add Property' : 'Edit Property' ) ),
+            appBar: AppBar( title: Text( property == null ? 'Add Property' : 'Edit Property' ) ),
             body: Padding(
                 padding: const EdgeInsets.all( 16.0 ),
                     child: Form(
@@ -73,7 +77,7 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
                             children: [
                                 TextFormField(
                                     controller: titleController,
-                                    decoration: InputDecoration( labelText: 'Title' ),
+                                    decoration: const InputDecoration( labelText: 'Title' ),
                                     validator: ( value )
                                     {
                                         if ( value == null || value.isEmpty )
@@ -85,7 +89,7 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
                                     },
                                 ),
                                 ElevatedButton(
-                                    child: Text( widget.property == null ? 'Add' : 'Update' ),
+                                    child: Text( property == null ? 'Add' : 'Update' ),
                                     onPressed:
                                         () async
                                         {

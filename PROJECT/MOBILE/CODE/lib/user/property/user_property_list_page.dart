@@ -3,18 +3,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'property_service.dart';
-import 'user_service.dart';
+import 'user_property_edition_page.dart';
+import 'user_property_list_store.dart';
+import 'user_property_list_store_state.dart';
 
 // -- TYPES
 
 class UserPropertyListPage
     extends StatefulWidget
 {
+    // -- CONSTRUCTORS
+
+    const UserPropertyListPage(
+        {
+            super.key
+        }
+        );
+
     // -- OPERATIONS
 
     @override
-    UserPropertyListPageState createState() => UserPropertyListPageState();
+    UserPropertyListPageState createState(
+        )
+    {
+        return UserPropertyListPageState();
+    }
 }
 
 // ~~
@@ -24,8 +37,8 @@ class UserPropertyListPageState
 {
     // -- ATTRIBUTES
 
-    late final PropertyListStore
-        propertyListStore;
+    late final UserPropertyListStore
+        userPropertyListStore;
 
     // -- OPERATIONS
 
@@ -34,8 +47,9 @@ class UserPropertyListPageState
         )
     {
         super.initState();
-        propertyListStore = PropertyListStore();
-        propertyListStore.getUserPropertyList();
+
+        userPropertyListStore = UserPropertyListStore();
+        userPropertyListStore.fetch();
     }
 
     // ~~
@@ -46,38 +60,38 @@ class UserPropertyListPageState
         )
     {
         return Scaffold(
-            appBar: AppBar( title: Text( 'Properties' ) ),
-            body: BlocConsumer<PropertyListStore, PropertyListStoreState> (
-                bloc: propertyListStore,
+            appBar: AppBar( title: const Text( 'Properties' ) ),
+            body: BlocConsumer<UserPropertyListStore, UserPropertyListStoreState> (
+                bloc: userPropertyListStore,
                 listener: ( context, state )
                 {},
                 builder: ( context, state )
                 {
-                    if ( state is PropertyListStoreInitialState )
+                    if ( state is UserPropertyListStoreInitialState )
                     {
-                        return Text( 'Initial' );
+                        return const Text( 'Initial' );
                     }
-                    else if ( state is PropertyListStoreLoadingState )
+                    else if ( state is UserPropertyListStoreLoadingState )
                     {
-                        return Center( child: CircularProgressIndicator() );
+                        return const Center( child: CircularProgressIndicator() );
                     }
-                    else if ( state is PropertyListStoreErrorState )
+                    else if ( state is UserPropertyListStoreErrorState )
                     {
                         return Center( child: Text( state.error ) );
                     }
-                    else if ( state is PropertyListStoreLoadedState )
+                    else if ( state is UserPropertyListStoreLoadedState )
                     {
                         return ListView.builder(
-                            physics: ScrollPhysics(),
+                            physics: const ScrollPhysics(),
                             shrinkWrap: true,
-                            itemCount: state.propertyList.length,
+                            itemCount: state.userPropertyList.length,
                             itemBuilder: ( context, index )
                             {
-                                final property = state.propertyList[ index ];
+                                final userProperty = state.userPropertyList[ index ];
                                 return ListTile(
-                                    title: Text( property.title ),
+                                    title: Text( userProperty.title ),
                                     onTap: () => Navigator.push( context, MaterialPageRoute(
-                                        builder: ( context ) => UserPropertyEditionPage( property: property )
+                                        builder: ( context ) => UserPropertyEditionPage( propertyId: userProperty.id )
                                     ) ),
                                 );
                             },
@@ -85,7 +99,7 @@ class UserPropertyListPageState
                     }
                     else
                     {
-                        return Icon( Icons.error );
+                        return const Icon( Icons.error );
                     }
                 },
             ),
@@ -94,8 +108,8 @@ class UserPropertyListPageState
                 {
                     context.go( '/user/property/...' );
                 },
-                child: Icon( Icons.add ),
                 tooltip: 'Add Property',
+                child: const Icon( Icons.add ),
             ),
         );
     }

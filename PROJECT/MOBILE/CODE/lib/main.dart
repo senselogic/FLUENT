@@ -81,7 +81,7 @@ final GoRouter
                             {
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: PropertyListPage(),
+                                    child: const PropertyListPage(),
                                     transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                     {
                                         return FadeTransition( opacity: animation, child: child );
@@ -94,7 +94,7 @@ final GoRouter
                         pageBuilder: 
                             ( context, state )
                             {
-                                final propertyId = state.params[ 'propertyId' ];
+                                final propertyId = state.pathParameters[ 'propertyId' ]!;
 
                                 return CustomTransitionPage(
                                     key: state.pageKey,
@@ -159,7 +159,7 @@ final GoRouter
                                     {
                                         return CustomTransitionPage(
                                             key: state.pageKey,
-                                            child: UserPropertyListPage(),
+                                            child: const UserPropertyListPage(),
                                             transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                             {
                                                 return FadeTransition( opacity: animation, child: child );
@@ -172,7 +172,8 @@ final GoRouter
                                 pageBuilder: 
                                     ( context, state )
                                     {
-                                        final propertyId = state.params[ 'propertyId' ];
+                                        final propertyId = state.pathParameters[ 'propertyId' ]!;
+                                        
                                         return CustomTransitionPage(
                                             key: state.pageKey,
                                             child: UserPropertyEditionPage( propertyId: propertyId ),

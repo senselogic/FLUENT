@@ -1,9 +1,9 @@
 // -- IMPORTS
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'property.dart';
 import 'property_list_store.dart';
 import 'property_list_store_state.dart';
 
@@ -14,12 +14,11 @@ class PropertyListPage
 {
     // -- CONSTRUCTORS
 
-    PropertyListPage(
+    const PropertyListPage(
         {
-            Key? key
+            super.key
         }
-        ) :
-        super( key: key );
+        );
 
     // -- OPERATIONS
 
@@ -50,7 +49,7 @@ class PropertyListPageState
         super.initState();
 
         propertyListStore = PropertyListStore();
-        propertyListStore.getPropertyList();
+        propertyListStore.fetch();
     }
 
     // ~~
@@ -75,11 +74,11 @@ class PropertyListPageState
                     {
                         if ( state is PropertyListStoreInitialState )
                         {
-                            return Text( 'Initial' );
+                            return const Text( 'Initial' );
                         }
                         else if ( state is PropertyListStoreLoadingState )
                         {
-                            return Center( child: CircularProgressIndicator() );
+                            return const Center( child: CircularProgressIndicator() );
                         }
                         if ( state is PropertyListStoreErrorState )
                         {
@@ -89,7 +88,7 @@ class PropertyListPageState
                         {
                             return
                                 ListView.builder(
-                                    physics: ScrollPhysics(),
+                                    physics: const ScrollPhysics(),
                                     shrinkWrap: true,
                                     itemCount: state.propertyList.length,
                                     itemBuilder:
@@ -102,8 +101,8 @@ class PropertyListPageState
                                                 title: Text( property.title ),
                                                 leading: CachedNetworkImage(
                                                     imageUrl: property.imagePath,
-                                                    placeholder: ( context, url ) => CircularProgressIndicator(),
-                                                    errorWidget: ( context, url, error ) => Icon( Icons.error )
+                                                    placeholder: ( context, url ) => const CircularProgressIndicator(),
+                                                    errorWidget: ( context, url, error ) => const Icon( Icons.error )
                                                     ),
                                                 onTap: () => context.go( '/property' ),
                                                 );
@@ -112,7 +111,7 @@ class PropertyListPageState
                         }
                         else
                         {
-                            return Icon( Icons.error );
+                            return const Icon( Icons.error );
                         }
                     }
                 )

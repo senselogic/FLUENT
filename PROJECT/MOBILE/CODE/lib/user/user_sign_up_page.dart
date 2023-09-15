@@ -1,8 +1,6 @@
 // -- IMPORTS
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'user_service.dart';
 
 // -- TYPES
@@ -19,6 +17,8 @@ class UserSignUpScreen
     final
         passwordController = TextEditingController();
 
+  UserSignUpScreen({super.key});
+
     // -- OPERATIONS
 
     @override
@@ -29,15 +29,15 @@ class UserSignUpScreen
         // :TODO: form validation
 
         return Scaffold(
-            appBar: AppBar( title: Text( 'Sign Up' ) ),
+            appBar: AppBar( title: const Text( 'Sign Up' ) ),
             body: Padding(
                 padding: const EdgeInsets.all( 16.0 ),
                     child: Column(
                         children: [
-                            TextField( controller: emailController, decoration: InputDecoration( labelText: 'Email' ) ),
-                            TextField( controller: passwordController, decoration: InputDecoration( labelText: 'Password' ), obscureText: true ),
+                            TextField( controller: emailController, decoration: const InputDecoration( labelText: 'Email' ) ),
+                            TextField( controller: passwordController, decoration: const InputDecoration( labelText: 'Password' ), obscureText: true ),
                             ElevatedButton(
-                                child: Text( 'Sign Up' ),
+                                child: const Text( 'Sign Up' ),
                                 onPressed:
                                     () async
                                     {
@@ -50,7 +50,7 @@ class UserSignUpScreen
                                         else
                                         {
                                             ScaffoldMessenger.of( context ).showSnackBar(
-                                                SnackBar( content: Text( 'Failed to sign up.' ) )
+                                                const SnackBar( content: Text( 'Failed to sign up.' ) )
                                                 );
                                         }
                                     }

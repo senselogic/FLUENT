@@ -1,7 +1,7 @@
 // -- IMPORTS
 
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../database/database.dart';
-import 'user.dart';
 
 // -- TYPES
 
@@ -14,11 +14,13 @@ class UserService
         String password
         ) async
     {
-        final response = await supabase.auth.signIn( email: email, password: password );
+        final response = await database.auth.signInWithPassword( email: email, password: password );
 
-        if ( response.error == null )
+        session = response.session;
+        user = response.user;
+
+        if ( user != null )
         {
-            user = User.fromMap( response.data );
             userIsAuthenticated = true;
 
             return true;
@@ -36,11 +38,13 @@ class UserService
         String password
         ) async
     {
-        final response = await supabase.auth.signUp( email: email, password: password );
+        final response = await database.auth.signUp( email: email, password: password );
 
-        if ( response.error == null )
+        session = response.session;
+        user = response.user;
+
+        if ( user != null )
         {
-            user = User.fromMap( response.data );
             userIsAuthenticated = true;
 
             return true;
@@ -56,18 +60,11 @@ class UserService
     Future<bool> signOut(
         ) async
     {
-        final response = await supabase.auth.signOut();
+        await database.auth.signOut();
 
-        if ( response.error == null )
-        {
-            userIsAuthenticated = false;
+        userIsAuthenticated = false;
 
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return true;
     }
 }
 
@@ -75,7 +72,9 @@ class UserService
 
 final
     userService = UserService();
-late User
+late User?
     user;
+late Session?
+    session;
 bool
     userIsAuthenticated = false;

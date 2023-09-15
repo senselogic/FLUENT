@@ -12,9 +12,43 @@ class PropertyService
     Future<List<Property>> getPropertyList(
         ) async
     {
-        final response = await database.from( 'PROPERTY' ).select().execute();
+        final response = await database.from( 'PROPERTY' ).select();
+        
+        if ( response.error == null ) 
+        {
+            return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+        }
+        else
+        {
+            throw Exception( 'getPropertyList: ${ response.error!.message }' );
+        }
+    }
 
-        return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+    // ~~
+
+    Future<Property> getPropertyById(
+        String propertyId
+        ) async
+    {
+        final response = await database.from( 'PROPERTY' ).select().eq( 'id', propertyId );
+        
+        if ( response.error == null ) 
+        {
+            final propertyList = response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+
+            if ( propertyList.isNotEmpty )
+            {
+                return propertyList[ 0 ];
+            }
+            else
+            {
+                throw Exception( 'getPropertyById: not found' );
+            }
+        }
+        else
+        {
+            throw Exception( 'getPropertyById: ${ response.error!.message }' );
+        }
     }
 
     // ~~
@@ -22,16 +56,25 @@ class PropertyService
     Future<List<Property>> getUserPropertyList(
         ) async
     {
-        final userId = supabase.auth.currentUser?.id;
+        final userId = database.auth.currentUser?.id;
 
-        if ( userId == null )
+        if ( userId != null )
         {
-            return [];
+            final response = await database.from( 'PROPERTY' ).select().eq( 'userId', userId );
+
+            if ( response.error == null ) 
+            {
+                return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+            }
+            else
+            {
+                throw Exception( 'getUserPropertyList: ${ response.error!.message }' );
+            }
         }
-
-        final response = await database.from( 'PROPERTY' ).select().eq( 'userId', userId ).execute();
-
-        return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+        else
+        {
+            throw Exception( 'getUserPropertyList: no current user' );
+        }
     }
 }
 
