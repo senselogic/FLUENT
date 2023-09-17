@@ -109,8 +109,8 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
                         {
                             return Column(
                                 children: [
-                                    Text( GetLocalizedText( state.property.title ) ),
-                                    Text( state.property.description ),
+                                    Text( getLocalizedText( state.property.title ) ),
+                                    Text( getLocalizedText( state.property.description ) ),
                                     Expanded(
                                         child: ListView.builder(
                                             itemCount: state.property.imagePathArray.length,
