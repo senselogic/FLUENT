@@ -14,14 +14,7 @@ class PropertyService
     {
         final response = await database.from( 'PROPERTY' ).select();
         
-        if ( response.error == null ) 
-        {
-            return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
-        }
-        else
-        {
-            throw Exception( 'getPropertyList: ${ response.error!.message }' );
-        }
+        return response.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
     }
 
     // ~~
@@ -30,24 +23,16 @@ class PropertyService
         String propertyId
         ) async
     {
-        final response = await database.from( 'PROPERTY' ).select().eq( 'id', propertyId );
-        
-        if ( response.error == null ) 
-        {
-            final propertyList = response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
+        final response = await database.from( 'PROPERTY' ).select().eq( 'id', propertyId );        
+        final propertyList = response.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
 
-            if ( propertyList.isNotEmpty )
-            {
-                return propertyList[ 0 ];
-            }
-            else
-            {
-                throw Exception( 'getPropertyById: not found' );
-            }
+        if ( propertyList.isNotEmpty )
+        {
+            return propertyList[ 0 ];
         }
         else
         {
-            throw Exception( 'getPropertyById: ${ response.error!.message }' );
+            throw Exception( 'getPropertyById : $propertyId'  );
         }
     }
 
@@ -62,18 +47,11 @@ class PropertyService
         {
             final response = await database.from( 'PROPERTY' ).select().eq( 'userId', userId );
 
-            if ( response.error == null ) 
-            {
-                return response.data.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
-            }
-            else
-            {
-                throw Exception( 'getUserPropertyList: ${ response.error!.message }' );
-            }
+            return response.map( ( map ) => Property.fromMap( map ) ).toList().cast<Property>();
         }
         else
         {
-            throw Exception( 'getUserPropertyList: no current user' );
+            throw Exception( 'getUserPropertyList : not connected' );
         }
     }
 }

@@ -6,33 +6,6 @@ import 'user_property_edition_store.dart';
 
 // -- TYPES
 
-class UserPropertyEditionPage
-    extends StatefulWidget
-{
-    // -- ATTRIBUTES
-
-    final String
-        propertyId;
-
-    // -- CONSTRUCTORS
-
-    const UserPropertyEditionPage(
-        {
-            super.key, 
-            required this.propertyId
-        }
-        );
-
-    @override
-    UserPropertyEditionPageState createState(
-        )
-    {
-        return UserPropertyEditionPageState();
-    }
-}
-
-// ~~
-
 class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
 {
     // -- ATTRIBUTES
@@ -104,5 +77,32 @@ class UserPropertyEditionPageState extends State<UserPropertyEditionPage>
                         )
                 )
             );
+    }
+}
+
+// ~~
+
+class UserPropertyEditionPage
+    extends StatefulWidget
+{
+    // -- ATTRIBUTES
+
+    final String
+        propertyId;
+
+    // -- CONSTRUCTORS
+
+    const UserPropertyEditionPage(
+        {
+            super.key, 
+            required this.propertyId
+        }
+        );
+
+    @override
+    UserPropertyEditionPageState createState(
+        )
+    {
+        return UserPropertyEditionPageState();
     }
 }

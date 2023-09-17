@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gist/gist.dart';
 import 'database/database.dart';
 import 'property/property_details_page.dart';
 import 'property/property_list_page.dart';
@@ -9,61 +10,6 @@ import 'user/user_sign_in_page.dart';
 import 'user/user_sign_up_page.dart';
 import 'user/property/user_property_list_page.dart';
 import 'user/property/user_property_edition_page.dart';
-
-// -- TYPES
-
-class FluentApp
-    extends StatelessWidget
-{
-    // -- CONSTRUCTORS
-
-    const FluentApp(
-        { super.key }
-        );
-
-    // -- OPERATIONS
-
-    @override
-    Widget build(
-        BuildContext context
-        )
-    {
-        return MaterialApp.router(
-            routerConfig: router,
-            );
-    }
-}
-
-// -- TYPES
-
-Future<void> main(
-    ) async
-{
-    WidgetsFlutterBinding.ensureInitialized();
-
-    await initializeDatabase();
-
-    runApp( const FluentApp() );
-}
-
-// -- FUNCTIONS
-
-bool requiresUserIsAuthenticated(
-    BuildContext context,
-    GoRouterState state
-    )
-{
-    if ( userIsAuthenticated )
-    {
-        return true;
-    }
-    else
-    {
-        context.go( '/signin' );
-
-        return false;
-    }
-}
 
 // -- VARIABLES
 
@@ -188,3 +134,63 @@ final GoRouter
                         )
                     ]
             );
+
+// -- TYPES
+
+class FluentApp
+    extends StatelessWidget
+{
+    // -- CONSTRUCTORS
+
+    const FluentApp(
+        { 
+            super.key 
+        }
+        );
+
+    // -- OPERATIONS
+
+    @override
+    Widget build(
+        BuildContext context
+        )
+    {
+        logAnyLevel();
+
+        return MaterialApp.router(
+            routerConfig: router
+            );
+    }
+}
+
+// -- FUNCTIONS
+
+bool requiresUserIsAuthenticated(
+    BuildContext context,
+    GoRouterState state
+    )
+{
+    if ( userIsAuthenticated )
+    {
+        return true;
+    }
+    else
+    {
+        context.go( '/signin' );
+
+        return false;
+    }
+}
+
+// ~~
+
+Future<void> main(
+    ) async
+{
+    WidgetsFlutterBinding.ensureInitialized();
+
+    await initializeDatabase();
+
+    runApp( const FluentApp() );
+}
+

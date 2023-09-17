@@ -10,29 +10,6 @@ import 'property_list_store_state.dart';
 
 // -- TYPES
 
-class PropertyListPage
-    extends StatefulWidget
-{
-    // -- CONSTRUCTORS
-
-    const PropertyListPage(
-        {
-            super.key
-        }
-        );
-
-    // -- OPERATIONS
-
-    @override
-    PropertyListPageState createState(
-        )
-    {
-        return PropertyListPageState();
-    }
-}
-
-// ~~
-
 class PropertyListPageState
     extends State<PropertyListPage>
 {
@@ -48,7 +25,7 @@ class PropertyListPageState
         )
     {
         super.initState();
-
+logWarning('PropertyListPageState::InitState');
         propertyListStore = PropertyListStore();
         propertyListStore.fetch();
     }
@@ -117,5 +94,28 @@ class PropertyListPageState
                     }
                 )
             );
+    }
+}
+
+// ~~
+
+class PropertyListPage
+    extends StatefulWidget
+{
+    // -- CONSTRUCTORS
+
+    const PropertyListPage(
+        {
+            super.key
+        }
+        );
+
+    // -- OPERATIONS
+
+    @override
+    PropertyListPageState createState(
+        )
+    {
+        return PropertyListPageState();
     }
 }

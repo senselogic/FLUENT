@@ -10,34 +10,6 @@ import 'property_details_store_state.dart';
 
 // -- TYPES
 
-class PropertyDetailsPage extends StatefulWidget
-{
-    // -- ATTRIBUTES
-
-    final String
-        propertyId;
-
-    // -- CONSTRUCTORS
-
-    const PropertyDetailsPage(
-        {
-            super.key, 
-            required this.propertyId
-        }
-        );
-
-    // -- OPERATIONS
-
-    @override
-    PropertyDetailsPageState createState(
-        )
-    {
-        return PropertyDetailsPageState();
-    }
-}
-
-// ~~
-
 class PropertyDetailsPageState extends State<PropertyDetailsPage>
 {
     // -- ATTRIBUTES
@@ -140,5 +112,33 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
                     }
                 )
             );
+    }
+}
+
+// ~~
+
+class PropertyDetailsPage extends StatefulWidget
+{
+    // -- ATTRIBUTES
+
+    final String
+        propertyId;
+
+    // -- CONSTRUCTORS
+
+    const PropertyDetailsPage(
+        {
+            super.key, 
+            required this.propertyId
+        }
+        );
+
+    // -- OPERATIONS
+
+    @override
+    PropertyDetailsPageState createState(
+        )
+    {
+        return PropertyDetailsPageState();
     }
 }

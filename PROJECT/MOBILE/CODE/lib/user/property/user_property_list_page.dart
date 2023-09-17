@@ -9,29 +9,6 @@ import 'user_property_list_store_state.dart';
 
 // -- TYPES
 
-class UserPropertyListPage
-    extends StatefulWidget
-{
-    // -- CONSTRUCTORS
-
-    const UserPropertyListPage(
-        {
-            super.key
-        }
-        );
-
-    // -- OPERATIONS
-
-    @override
-    UserPropertyListPageState createState(
-        )
-    {
-        return UserPropertyListPageState();
-    }
-}
-
-// ~~
-
 class UserPropertyListPageState
     extends State<UserPropertyListPage>
 {
@@ -112,5 +89,28 @@ class UserPropertyListPageState
                 child: const Icon( Icons.add ),
             ),
         );
+    }
+}
+
+// ~~
+
+class UserPropertyListPage
+    extends StatefulWidget
+{
+    // -- CONSTRUCTORS
+
+    const UserPropertyListPage(
+        {
+            super.key
+        }
+        );
+
+    // -- OPERATIONS
+
+    @override
+    UserPropertyListPageState createState(
+        )
+    {
+        return UserPropertyListPageState();
     }
 }

@@ -19,16 +19,7 @@ class UserService
         session = response.session;
         user = response.user;
 
-        if ( user != null )
-        {
-            userIsAuthenticated = true;
-
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return ( user != null );
     }
 
     // ~~
@@ -43,16 +34,7 @@ class UserService
         session = response.session;
         user = response.user;
 
-        if ( user != null )
-        {
-            userIsAuthenticated = true;
-
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return ( user != null );
     }
 
     // ~~
@@ -62,7 +44,7 @@ class UserService
     {
         await database.auth.signOut();
 
-        userIsAuthenticated = false;
+        user = null;
 
         return true;
     }
@@ -76,5 +58,3 @@ late User?
     user;
 late Session?
     session;
-bool
-    userIsAuthenticated = false;
