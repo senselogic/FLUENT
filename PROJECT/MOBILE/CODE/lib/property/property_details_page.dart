@@ -3,6 +3,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gist/gist.dart';
 import 'package:go_router/go_router.dart';
 import 'property_details_store.dart';
 import 'property_details_store_state.dart';
@@ -108,7 +109,7 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
                         {
                             return Column(
                                 children: [
-                                    Text( state.property.title ),
+                                    Text( GetLocalizedText( state.property.title ) ),
                                     Text( state.property.description ),
                                     Expanded(
                                         child: ListView.builder(

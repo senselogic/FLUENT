@@ -3,6 +3,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gist/gist.dart';
 import 'package:go_router/go_router.dart';
 import 'property_list_store.dart';
 import 'property_list_store_state.dart';
@@ -98,7 +99,7 @@ class PropertyListPageState
                                                 property = state.propertyList[ index ];
 
                                             return ListTile(
-                                                title: Text( property.title ),
+                                                title: Text( getLocalizedText( property.title ) ),
                                                 leading: CachedNetworkImage(
                                                     imageUrl: property.imagePath,
                                                     placeholder: ( context, url ) => const CircularProgressIndicator(),
