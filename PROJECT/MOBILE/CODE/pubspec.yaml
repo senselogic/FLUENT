@@ -21,7 +21,7 @@ dependencies:
   flutter_animate: ^4.2.0+1
   flutter_bloc: ^8.1.3
   go_router: ^10.1.0
-  senselogic_gist: ^0.0.5
+  senselogic_gist: ^2.0.6
   shared_preferences: ^2.2.0
   supabase_flutter: ^1.10.13
   uuid: ^4.0.0

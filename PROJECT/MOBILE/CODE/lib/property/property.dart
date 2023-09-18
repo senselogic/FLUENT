@@ -12,8 +12,10 @@ class Property
         city,
         country,
         title,
-        description,
-        price,
+        description;
+    final double 
+        price;
+    final String 
         imagePath;
     final List<String> 
         imagePathArray;

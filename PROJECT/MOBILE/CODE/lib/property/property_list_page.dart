@@ -25,7 +25,7 @@ class PropertyListPageState
         )
     {
         super.initState();
-logWarning('PropertyListPageState::InitState');
+
         propertyListStore = PropertyListStore();
         propertyListStore.fetch();
     }
