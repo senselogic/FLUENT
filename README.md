@@ -2,7 +2,7 @@
 
 # Fluent
 
-Flutter/SvelteKit application startup project.
+Startup project for Flutter and Sveltekit.
 
 ## Version
 
