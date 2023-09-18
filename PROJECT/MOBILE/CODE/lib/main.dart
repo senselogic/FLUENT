@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gist/gist.dart';
+import 'package:senselogic_gist/senselogic_gist.dart';
 import 'database/database.dart';
 import 'property/property_details_page.dart';
 import 'property/property_list_page.dart';

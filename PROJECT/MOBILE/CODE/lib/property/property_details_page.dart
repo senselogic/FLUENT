@@ -3,8 +3,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gist/gist.dart';
 import 'package:go_router/go_router.dart';
+import 'package:senselogic_gist/senselogic_gist.dart';
 import 'property_details_store.dart';
 import 'property_details_store_state.dart';
 
