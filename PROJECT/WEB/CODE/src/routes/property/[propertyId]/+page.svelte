@@ -1,13 +1,21 @@
-<style>
+<style lang="stylus">
+    // -- IMPORTS
+    
+    @import '../../../constant.styl';
+    
+    // -- CLASSES
+    
     .property
     {
     }
 
     .property-title
     {
+        margin-bottom: 0.5rem;
+
         font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        color: redColor;
     }
 
     .property-image-list
@@ -19,8 +27,9 @@
 
     .property-image
     {
-        width: 20rem;
         height: 15rem;
+        width: 20rem;
+
         object-fit: cover;
     }
 </style>

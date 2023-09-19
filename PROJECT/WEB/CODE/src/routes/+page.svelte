@@ -1,4 +1,10 @@
-<style>
+<style lang="stylus">
+    // -- IMPORTS
+    
+    @import '../constant.styl';
+    
+    // -- CLASSES
+
     .property-list
     {
         display: grid;
@@ -12,15 +18,18 @@
 
     .property-title
     {
+        margin-bottom: 0.5rem;
+
         font-size: 1rem;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        color: redColor;
     }
 
     .property-image
     {
-        width: 20rem;
         height: 15rem;
+        width: 20rem;
+
         object-fit: cover;
     }
 </style>
@@ -31,6 +40,9 @@
             <img class="property-image" src="{ property.imagePath }"/>
             <div class="property-title">
                 <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
+                <div>
+                    { getLocalizedText( property.description ) }
+                </div>
             </div>
         </div>
     { /each }
@@ -41,4 +53,3 @@
 
     export let data;
 </script>
-

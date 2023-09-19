@@ -1,0 +1,2 @@
+define_database.bat
+DATABASE/*.sql
