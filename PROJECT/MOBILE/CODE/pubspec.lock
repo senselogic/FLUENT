@@ -26,7 +26,7 @@ packages:
     source: hosted
     version: "2.11.0"
   bloc:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: bloc
       sha256: "3820f15f502372d979121de1f6b97bfcf1630ebff8fe1d52fb2b0bfa49be5b49"
@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.3.2"
+  extra_alignments:
+    dependency: "direct main"
+    description:
+      name: extra_alignments
+      sha256: cc0425d08b3f1b3404439da939593aa3b7931c6f7f251030632e14337bf79e00
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+1"
   fake_async:
     dependency: transitive
     description:
@@ -145,11 +153,27 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.5.0"
+  flextras:
+    dependency: "direct main"
+    description:
+      name: flextras
+      sha256: e73b5c86dd9419569d2a48db470059b41b496012513e4e1bdc56ba2c661048d9
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_animate:
+    dependency: "direct main"
+    description:
+      name: flutter_animate
+      sha256: "62f346340a96192070e31e3f2a1bd30a28530f1fe8be978821e06cd56b74d6d2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.0+1"
   flutter_bloc:
     dependency: "direct main"
     description:
@@ -544,6 +568,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  sized_context:
+    dependency: "direct main"
+    description:
+      name: sized_context
+      sha256: "9921e6c09e018132c3e1c6a18e14febbc1cc5c87a200d64ff7578cb49991f6e7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+4"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -669,6 +701,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.2"
+  universal_platform:
+    dependency: "direct main"
+    description:
+      name: universal_platform
+      sha256: d315be0f6641898b280ffa34e2ddb14f3d12b1a37882557869646e0cc363d0cc
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+1"
   url_launcher:
     dependency: transitive
     description:

@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import '../database/database.dart';
-import 'user_profile.dart';
+import '../entity/user_profile.dart';
 
 // -- TYPES
 

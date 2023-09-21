@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import 'package:flutter/material.dart';
-import '../../property/property.dart';
+import '../../../entity/property.dart';
 import 'user_property_edition_store.dart';
 
 // -- TYPES

@@ -2,7 +2,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'user_property_list_store_state.dart';
-import '../../property/property_service.dart';
+import '../../../service/property_service.dart';
 
 // -- TYPES
 

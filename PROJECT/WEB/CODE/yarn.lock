@@ -1566,10 +1566,10 @@ semver@^7.3.7, semver@^7.5.3:
   dependencies:
     lru-cache "^6.0.0"
 
-senselogic-flow@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/senselogic-flow/-/senselogic-flow-0.0.8.tgz#a53a80fa8e4201f137544bfe6277f6a0a9c68e4b"
-  integrity sha512-xa0iLMXg3ibXF0zR9TZaa/b3kgLE3+H4TU9BoWLTN/sVX+d/kIA2lNroc/lK1/7pOgurcq8WBFF38OUvqelcZw==
+senselogic-flow@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/senselogic-flow/-/senselogic-flow-0.0.10.tgz#bb63a7a02fa25c5d6edcfe7d5ee66ad9c6600ab2"
+  integrity sha512-D8d4RouMskRVtZeP55r7329d+ciwNAWMNauMFmeJM/kwo8+e74ivx+T0ZeT4pUcwHM6GOLqfhGTJBMyC+NSIAQ==
 
 senselogic-gist@^2.0.7:
   version "2.0.7"

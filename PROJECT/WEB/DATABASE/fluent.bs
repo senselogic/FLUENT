@@ -47,7 +47,7 @@ public
         price : FLOAT64
         imagePath : IMAGE.path
         imagePathArray : LIST[ IMAGE.path ] | count 5
-        userProfileId : USER_PROFILE.id | linked auth.users
+        userProfileId : USER_PROFILE.id | private, linked auth.users
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
@@ -55,6 +55,6 @@ public
 
         path : STRING = "/image/property/outside_{{integer 1 8}}.jpg|/image/property/inside_{{integer 1 16}}.jpg" | key, unique
         propertyId : PROPERTY.id
-        userProfileId : USER_PROFILE.id | linked auth.users
+        userProfileId : USER_PROFILE.id | private, linked auth.users
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated

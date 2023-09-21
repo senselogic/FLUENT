@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
 import 'database/database.dart';
-import 'property/property_details_page.dart';
-import 'property/property_list_page.dart';
-import 'user/user_sign_in_page.dart';
-import 'user/user_sign_up_page.dart';
-import 'user/property/user_property_list_page.dart';
-import 'user/property/user_property_edition_page.dart';
+import 'page/property/property_details_page.dart';
+import 'page/property/property_list_page.dart';
+import 'page/user/user_sign_in_page.dart';
+import 'page/user/user_sign_up_page.dart';
+import 'page/user/property/user_property_list_page.dart';
+import 'page/user/property/user_property_edition_page.dart';
 
 // -- VARIABLES
 

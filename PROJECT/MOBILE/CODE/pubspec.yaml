@@ -23,6 +23,12 @@ dependencies:
   shared_preferences: ^2.2.0
   supabase_flutter: ^1.10.13
   uuid: ^4.0.0
+  sized_context: ^1.0.0+4
+  universal_platform: ^1.0.0+1
+  flutter_animate: ^4.2.0+1
+  flextras: ^1.0.0
+  extra_alignments: ^1.0.0+1
+  bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:

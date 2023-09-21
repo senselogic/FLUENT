@@ -1,7 +1,7 @@
 // -- IMPORTS
 
 import 'package:flutter/material.dart';
-import 'user_service.dart';
+import '../../service/user_service.dart';
 
 // -- TYPES
 

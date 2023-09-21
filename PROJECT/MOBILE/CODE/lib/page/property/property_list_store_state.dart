@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import 'property.dart';
+import '../../entity/property.dart';
 
 // -- TYPES
 
