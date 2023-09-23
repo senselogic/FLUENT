@@ -1,2 +1,3 @@
 define_database.bat
 DATABASE/*.sql
+DATABASE/DART/

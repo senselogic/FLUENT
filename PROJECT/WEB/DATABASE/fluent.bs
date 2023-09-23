@@ -32,7 +32,7 @@ public
         email : STRING
         phoneNumber : STRING
         countryCode : COUNTRY.code
-        imagePath : STRING = "/image/profile/profile_{{integer 1 20}}.jpg"
+        imagePath : STRING = "/upload/image/profile/profile_{{integer 1 20}}.jpg"
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 
@@ -53,7 +53,7 @@ public
 
     IMAGE | dropped, count 24
 
-        path : STRING = "/image/property/outside_{{integer 1 8}}.jpg|/image/property/inside_{{integer 1 16}}.jpg" | key, unique
+        path : STRING = "/upload/image/property/outside_{{integer 1 8}}.jpg|/upload/image/property/inside_{{integer 1 16}}.jpg" | key, unique
         propertyId : PROPERTY.id
         userProfileId : USER_PROFILE.id | private, linked auth.users
         creationTimestamp : TIMESTAMP | generated

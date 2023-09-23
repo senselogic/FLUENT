@@ -7,6 +7,22 @@ import { createClient } from '@supabase/supabase-js';
 export let
     databaseName = 'public';
 
+// -- FUNCTIONS
+
+export function getStorageFilePath(
+    filePath
+    )
+{
+    if ( filePath.startsWith( '/upload/' ) )
+    {
+        return process.env.FLUENT_STORAGE_URL + filePath;
+    }
+    else
+    {
+        return filePath;
+    }
+}
+
 // -- STATEMENTS
 
 export const database

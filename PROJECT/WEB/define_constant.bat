@@ -1,0 +1,7 @@
+setx FLUENT_DATABASE_HOST "db.ojayzqmeuqwprxbfztiz.supabase.co"
+setx FLUENT_DATABASE_PASSWORD "P1IDSfXxN0MpNhSslNGcxkfWMuCY1Ntd"
+setx FLUENT_DATABASE_URL "https://ojayzqmeuqwprxbfztiz.supabase.co"
+setx FLUENT_DATABASE_KEY "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qYXl6cW1ldXF3cHJ4YmZ6dGl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU0NjY2MDksImV4cCI6MjAxMTA0MjYwOX0.1pzey5vXqIfYrKXoXy0mDkxTji77pradjMB1DpaSSUw"
+setx FLUENT_STORAGE_URL "https://ojayzqmeuqwprxbfztiz.supabase.co/storage/v1/object/public"
+setx TOOL "E:\PROJECT\TOOL"
+pause

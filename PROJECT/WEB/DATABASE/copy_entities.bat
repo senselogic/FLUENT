@@ -1,2 +1,2 @@
-copy /Y DART\*.* ..\..\MOBILE\CODE\lib\entity
+copy /Y DART\ENTITY\*.* ..\..\MOBILE\CODE\lib\entity
 pause

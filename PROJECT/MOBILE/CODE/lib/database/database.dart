@@ -20,3 +20,19 @@ Future<void> initializeDatabase(
 
     database = Supabase.instance.client;
 }
+
+// ~~
+
+String getStorageFilePath(
+    String filePath
+    )
+{
+    if ( filePath.startsWith( '/upload/' ) )
+    {
+        return storageUrl + filePath;
+    }
+    else
+    {
+        return filePath;
+    }
+}

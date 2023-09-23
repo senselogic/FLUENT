@@ -2,7 +2,7 @@
 
 import { json } from '@sveltejs/kit';
 import { getRandomTuid } from 'senselogic-gist';
-import { propertyService } from '$lib/property/property_service';
+import { propertyService } from '$lib/service/property_service';
 
 // -- FUNCTIONS
 

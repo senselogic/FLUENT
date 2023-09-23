@@ -1,8 +1,8 @@
 <style lang="stylus">
     // -- IMPORTS
-    
+
     @import '../constant.styl';
-    
+
     // -- CLASSES
 
     .property-list
@@ -37,7 +37,7 @@
 <div class="property-list">
     { #each data.propertyArray as property }
         <div class="property">
-            <img class="property-image" src="{ property.imagePath }"/>
+            <img class="property-image" src="{ getStorageFilePath( property.imagePath ) }"/>
             <div class="property-title">
                 <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
                 <div>
@@ -49,7 +49,12 @@
 </div>
 
 <script>
+    // -- IMPORTS
+
     import { getLocalizedText } from 'senselogic-gist';
+    import { getStorageFilePath } from '$lib/database.js';
+
+    // -- STATEMENTS
 
     export let data;
 </script>

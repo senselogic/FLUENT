@@ -1,10 +1,10 @@
 <style lang="stylus">
     // -- IMPORTS
-    
+
     @import '../../../constant.styl';
-    
+
     // -- CLASSES
-    
+
     .property
     {
     }
@@ -42,7 +42,7 @@
         <div class="property-image-list">
             { #each data.property.imagePathArray as imagePath }
                 <div class="property-image-container">
-                    <img class="property-image" src="{ imagePath }"/>
+                    <img class="property-image" src="{ getStorageFilePath( imagePath ) }"/>
                 </div>
             { /each }
         </div>
@@ -54,7 +54,12 @@
 </div>
 
 <script>
+    // -- IMPORTS
+
     import { getLocalizedText } from 'senselogic-gist';
+    import { getStorageFilePath } from '$lib/database.js';
+
+    // -- STATEMENTS
 
     export let data;
 </script>

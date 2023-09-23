@@ -2,7 +2,7 @@
 
 import { json } from '@sveltejs/kit';
 import { getRandomTuid } from 'senselogic-gist';
-import { imageService } from '$lib/image/image_service';
+import { imageService } from '$lib/service/image_service';
 
 // -- FUNCTIONS
 
