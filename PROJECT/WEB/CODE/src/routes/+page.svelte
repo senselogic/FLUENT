@@ -37,7 +37,7 @@
 <div class="property-list">
     { #each data.propertyArray as property }
         <div class="property">
-            <img class="property-image" src="{ getStorageFilePath( property.imagePath ) }"/>
+            <img class="property-image" src="{ getStorageImagePath( property.imagePath, 640 ) }"/>
             <div class="property-title">
                 <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
                 <div>
@@ -52,7 +52,7 @@
     // -- IMPORTS
 
     import { getLocalizedText } from 'senselogic-gist';
-    import { getStorageFilePath } from '$lib/database.js';
+    import { getStorageImagePath } from '$lib/storage.js';
 
     // -- STATEMENTS
 

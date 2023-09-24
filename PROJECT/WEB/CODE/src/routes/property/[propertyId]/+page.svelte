@@ -42,7 +42,7 @@
         <div class="property-image-list">
             { #each data.property.imagePathArray as imagePath }
                 <div class="property-image-container">
-                    <img class="property-image" src="{ getStorageFilePath( imagePath ) }"/>
+                    <img class="property-image" src="{ getStorageImagePath( imagePath, 640 ) }"/>
                 </div>
             { /each }
         </div>
@@ -57,7 +57,7 @@
     // -- IMPORTS
 
     import { getLocalizedText } from 'senselogic-gist';
-    import { getStorageFilePath } from '$lib/database.js';
+    import { getStorageImagePath } from '$lib/storage.js';
 
     // -- STATEMENTS
 
