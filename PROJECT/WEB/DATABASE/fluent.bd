@@ -1,4 +1,4 @@
 @include DATA/continent.bd
 @include DATA/country.bd
 @include DATA/language.bd
-@include DATA/user_profile.bd
+@include DATA/profile.bd
