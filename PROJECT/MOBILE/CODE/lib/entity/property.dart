@@ -19,6 +19,8 @@ class Property
         imagePath;
     final List<String>
         imagePathArray;
+    final Map<String, String>
+        propertyByNameMap;
 
     // -- CONSTRUCTORS
 
@@ -32,7 +34,8 @@ class Property
             required this.description,
             required this.price,
             required this.imagePath,
-            required this.imagePathArray
+            required this.imagePathArray,
+            required this.propertyByNameMap
         }
         );
 
@@ -67,7 +70,8 @@ class Property
             String? description,
             double? price,
             String? imagePath,
-            List<String>? imagePathArray
+            List<String>? imagePathArray,
+            Map<String, String>? propertyByNameMap
         }
         )
     {
@@ -80,7 +84,8 @@ class Property
             description: description ?? this.description,
             price: price ?? this.price,
             imagePath: imagePath ?? this.imagePath,
-            imagePathArray: imagePathArray ?? this.imagePathArray
+            imagePathArray: imagePathArray ?? this.imagePathArray,
+            propertyByNameMap: propertyByNameMap ?? this.propertyByNameMap
             );
     }
 
@@ -99,7 +104,8 @@ class Property
             description: map[ 'description' ],
             price: map[ 'price' ],
             imagePath: map[ 'imagePath' ],
-            imagePathArray: List<String>.from( map[ 'imagePathArray' ] )
+            imagePathArray: List<String>.from( map[ 'imagePathArray' ] ),
+            propertyByNameMap: Map<String, String>.from( map[ 'propertyByNameMap' ] )
             );
     }
 
@@ -118,7 +124,8 @@ class Property
                 'description': description,
                 'price': price,
                 'imagePath': imagePath,
-                'imagePathArray': imagePathArray
+                'imagePathArray': imagePathArray,
+                'propertyByNameMap': propertyByNameMap
             };
     }
 
@@ -128,7 +135,7 @@ class Property
     String toString(
         )
     {
-        return 'Property { id: $id, number: $number, city: $city, country: $country, title: $title, description: $description, price: $price, imagePath: $imagePath, imagePathArray: $imagePathArray }';
+        return 'Property { id: $id, number: $number, city: $city, country: $country, title: $title, description: $description, price: $price, imagePath: $imagePath, imagePathArray: $imagePathArray, propertyByNameMap: $propertyByNameMap }';
     }
 
     // ~~

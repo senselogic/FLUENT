@@ -1,3 +1,4 @@
+define_environment_variables.bat
 CODE/.env
 DATABASE/*.sql
 DATABASE/DART/

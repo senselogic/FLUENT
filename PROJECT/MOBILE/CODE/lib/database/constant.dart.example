@@ -1,6 +1,5 @@
 // -- CONSTANTS
 
-const 
+const
     databaseUrl = 'https://xxx.supabase.co',
-    databaseKey = 'xxx.xxx.xxx',
-    storageUrl = 'https://xxx.supabase.co/storage/v1/object/public';
+    databaseKey = 'xxx.xxx.xxx';

@@ -1571,10 +1571,10 @@ senselogic-flow@^0.0.10:
   resolved "https://registry.yarnpkg.com/senselogic-flow/-/senselogic-flow-0.0.10.tgz#bb63a7a02fa25c5d6edcfe7d5ee66ad9c6600ab2"
   integrity sha512-D8d4RouMskRVtZeP55r7329d+ciwNAWMNauMFmeJM/kwo8+e74ivx+T0ZeT4pUcwHM6GOLqfhGTJBMyC+NSIAQ==
 
-senselogic-gist@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.7.tgz#fa3af08726de8d3effd612fdcb2023829bd72c6f"
-  integrity sha512-bbh3fnPmrf/iGJ24DUF/RopdF4e9V1FzQr6aBlO+ZbpD8spCzr92o8ifcWC7dDcbF1qPmLa73oz28Zp3gUz6pw==
+senselogic-gist@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.8.tgz#c958ff18c69f724299d0ab4baed82c597d2216cc"
+  integrity sha512-jE8ES+Sq4qf73TA1991ic/GhuvBejzj+7Jxe5LMOLNF2C7pp+dYJNNuwX9rO2NMhjmACfEFp3B1B8mY9h7DFmw==
   dependencies:
     md5 "^2.3.0"
 

@@ -484,10 +484,10 @@ packages:
     dependency: "direct main"
     description:
       name: senselogic_gist
-      sha256: "948a8db447aebcfe0055c5c8f41bb17cd61d57c7049cf2d457086acbd564f379"
+      sha256: "085c868a79876266927ad331382a934685bf1cdbebc236685135edb9ee02f69a"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.7"
+    version: "2.0.8"
   shared_preferences:
     dependency: "direct main"
     description:
