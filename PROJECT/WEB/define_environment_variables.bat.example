@@ -1,0 +1,4 @@
+setx TOOL "E:\PROJECT\TOOL"
+setx FLUENT_DATABASE_HOST=db.xxx.supabase.co
+setx FLUENT_DATABASE_PASSWORD=xxx
+pause
