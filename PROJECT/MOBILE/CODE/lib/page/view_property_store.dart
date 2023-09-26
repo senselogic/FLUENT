@@ -1,19 +1,19 @@
 // -- IMPORTS
 
 import 'package:bloc/bloc.dart';
-import 'property_details_store_state.dart';
+import 'view_property_store_state.dart';
 import '../../service/property_service.dart';
 
 // -- TYPES
 
-class PropertyDetailsStore
-    extends Cubit<PropertyDetailsStoreState>
+class ViewPropertyStore
+    extends Cubit<ViewPropertyStoreState>
 {
     // -- CONSTRUCTORS
 
-    PropertyDetailsStore(
+    ViewPropertyStore(
         ) :
-        super( PropertyDetailsStoreInitialState() );
+        super( ViewPropertyStoreInitialState() );
 
     // -- OPERATIONS
 
@@ -23,13 +23,13 @@ class PropertyDetailsStore
     {
         try
         {
-            emit( PropertyDetailsStoreLoadingState() );
+            emit( ViewPropertyStoreLoadingState() );
             final property = await propertyService.getPropertyById( propertyId );
-            emit( PropertyDetailsStoreLoadedState( property: property ) );
+            emit( ViewPropertyStoreLoadedState( property: property ) );
         }
         catch ( exception )
         {
-            emit( PropertyDetailsStoreErrorState( error: exception.toString() ) );
+            emit( ViewPropertyStoreErrorState( error: exception.toString() ) );
         }
     }
 }

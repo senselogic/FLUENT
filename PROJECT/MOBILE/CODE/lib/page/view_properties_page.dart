@@ -6,17 +6,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
 import '../storage/storage.dart';
-import 'property_details_store.dart';
-import 'property_details_store_state.dart';
+import 'view_properties_store.dart';
+import 'view_properties_store_state.dart';
 
 // -- TYPES
 
-class PropertyDetailsPageState extends State<PropertyDetailsPage>
+class ViewPropertiesPageState
+    extends State<ViewPropertiesPage>
 {
     // -- ATTRIBUTES
 
-    late final PropertyDetailsStore
-        propertyDetailsStore;
+    late final ViewPropertiesStore
+        propertyListStore;
 
     // -- OPERATIONS
 
@@ -26,8 +27,8 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
     {
         super.initState();
 
-        propertyDetailsStore = PropertyDetailsStore();
-        propertyDetailsStore.fetch( widget.propertyId );
+        propertyListStore = ViewPropertiesStore();
+        propertyListStore.fetch();
     }
 
     // ~~
@@ -64,8 +65,8 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
                         )
                     ]
                 ),
-            body: BlocConsumer<PropertyDetailsStore, PropertyDetailsStoreState>(
-                bloc: propertyDetailsStore,
+            body: BlocConsumer<ViewPropertiesStore, ViewPropertiesStoreState>(
+                bloc: propertyListStore,
                 listener:
                     ( context, state )
                     {
@@ -73,45 +74,42 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
                 builder:
                     ( context, state )
                     {
-                        if ( state is PropertyDetailsStoreInitialState )
+                        if ( state is ViewPropertiesStoreInitialState )
                         {
                             return const Text( 'Initial' );
                         }
-                        else if ( state is PropertyDetailsStoreLoadingState )
+                        else if ( state is ViewPropertiesStoreLoadingState )
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is PropertyDetailsStoreErrorState )
+                        if ( state is ViewPropertiesStoreErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
-                        else if ( state is PropertyDetailsStoreLoadedState )
+                        else if ( state is ViewPropertiesStoreLoadedState )
                         {
-                            return Column(
-                                children: [
-                                    Text( getLocalizedText( state.property.title ) ),
-                                    Text( getLocalizedText( state.property.description ) ),
-                                    Expanded(
-                                        child: ListView.builder(
-                                            itemCount: state.property.imagePathArray.length,
-                                            itemBuilder: ( context, index )
-                                            {
-                                                return CachedNetworkImage(
-                                                    imageUrl: getStorageImagePath( state.property.imagePathArray[ index ], 640 ),
+                            return
+                                ListView.builder(
+                                    physics: const ScrollPhysics(),
+                                    shrinkWrap: true,
+                                    itemCount: state.propertyList.length,
+                                    itemBuilder:
+                                        ( context, index )
+                                        {
+                                            final
+                                                property = state.propertyList[ index ];
+
+                                            return ListTile(
+                                                title: Text( getLocalizedText( property.title ) ),
+                                                leading: CachedNetworkImage(
+                                                    imageUrl: getStorageImagePath( property.imagePath, 640 ),
                                                     placeholder: ( context, url ) => const CircularProgressIndicator(),
                                                     errorWidget: ( context, url, error ) => const Icon( Icons.error )
-                                                    );
-                                            }
-                                            )
-                                        ),
-                                    Center(
-                                        child: ElevatedButton(
-                                            onPressed: () => context.go( '/' ),
-                                            child: const Text( 'Back' )
-                                            )
-                                        )
-                                    ]
-                                );
+                                                    ),
+                                                onTap: () => context.go( '/property/${ property.id }' ),
+                                                );
+                                        }
+                                    );
                         }
                         else
                         {
@@ -125,28 +123,23 @@ class PropertyDetailsPageState extends State<PropertyDetailsPage>
 
 // ~~
 
-class PropertyDetailsPage extends StatefulWidget
+class ViewPropertiesPage
+    extends StatefulWidget
 {
-    // -- ATTRIBUTES
-
-    final String
-        propertyId;
-
     // -- CONSTRUCTORS
 
-    const PropertyDetailsPage(
+    const ViewPropertiesPage(
         {
-            super.key,
-            required this.propertyId
+            super.key
         }
         );
 
     // -- OPERATIONS
 
     @override
-    PropertyDetailsPageState createState(
+    ViewPropertiesPageState createState(
         )
     {
-        return PropertyDetailsPageState();
+        return ViewPropertiesPageState();
     }
 }

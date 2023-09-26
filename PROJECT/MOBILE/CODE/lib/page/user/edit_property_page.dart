@@ -3,16 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../entity/property.dart';
-import 'dashboard_property_edition_store.dart';
+import 'edit_property_store.dart';
 
 // -- TYPES
 
-class DashboardPropertyEditionPageState extends State<DashboardPropertyEditionPage>
+class EditPropertyPageState extends State<EditPropertyPage>
 {
     // -- ATTRIBUTES
 
-    late final DashboardPropertyEditionStore
-        dashboardPropertyEditionStore;
+    late final EditPropertyStore
+        editPropertyStore;
     final
         formKey = GlobalKey<FormState>();
     late Property?
@@ -29,8 +29,8 @@ class DashboardPropertyEditionPageState extends State<DashboardPropertyEditionPa
     {
         super.initState();
 
-        dashboardPropertyEditionStore = DashboardPropertyEditionStore();
-        dashboardPropertyEditionStore.fetch( widget.propertyId );
+        editPropertyStore = EditPropertyStore();
+        editPropertyStore.fetch( widget.propertyId );
 
         titleController = TextEditingController( text: property?.title ?? "" );
         descriptionController = TextEditingController( text: property?.description ?? "" );
@@ -101,7 +101,7 @@ class DashboardPropertyEditionPageState extends State<DashboardPropertyEditionPa
 
 // ~~
 
-class DashboardPropertyEditionPage
+class EditPropertyPage
     extends StatefulWidget
 {
     // -- ATTRIBUTES
@@ -111,7 +111,7 @@ class DashboardPropertyEditionPage
 
     // -- CONSTRUCTORS
 
-    const DashboardPropertyEditionPage(
+    const EditPropertyPage(
         {
             super.key, 
             required this.propertyId
@@ -119,9 +119,9 @@ class DashboardPropertyEditionPage
         );
 
     @override
-    DashboardPropertyEditionPageState createState(
+    EditPropertyPageState createState(
         )
     {
-        return DashboardPropertyEditionPageState();
+        return EditPropertyPageState();
     }
 }

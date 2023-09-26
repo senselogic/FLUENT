@@ -5,7 +5,7 @@ import '../../service/user_service.dart';
 
 // -- TYPES
 
-class PublicSignInPage
+class PublicSignInUserPage
     extends StatelessWidget
 {
     // -- ATTRIBUTES
@@ -17,7 +17,7 @@ class PublicSignInPage
     final
         passwordController = TextEditingController();
 
-  PublicSignInPage({super.key});
+  PublicSignInUserPage({super.key});
 
     // -- OPERATIONS
 

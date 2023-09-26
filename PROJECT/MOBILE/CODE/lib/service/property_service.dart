@@ -51,7 +51,7 @@ class PropertyService
         }
         else
         {
-            throw Exception( 'getDashboardPropertyList : not connected' );
+            throw Exception( 'getUserPropertyList : not connected' );
         }
     }
 }

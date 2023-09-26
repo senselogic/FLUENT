@@ -6,18 +6,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
 import '../storage/storage.dart';
-import 'property_list_store.dart';
-import 'property_list_store_state.dart';
+import 'view_property_store.dart';
+import 'view_property_store_state.dart';
 
 // -- TYPES
 
-class PropertyListPageState
-    extends State<PropertyListPage>
+class ViewPropertyPageState extends State<ViewPropertyPage>
 {
     // -- ATTRIBUTES
 
-    late final PropertyListStore
-        propertyListStore;
+    late final ViewPropertyStore
+        propertyDetailsStore;
 
     // -- OPERATIONS
 
@@ -27,8 +26,8 @@ class PropertyListPageState
     {
         super.initState();
 
-        propertyListStore = PropertyListStore();
-        propertyListStore.fetch();
+        propertyDetailsStore = ViewPropertyStore();
+        propertyDetailsStore.fetch( widget.propertyId );
     }
 
     // ~~
@@ -65,8 +64,8 @@ class PropertyListPageState
                         )
                     ]
                 ),
-            body: BlocConsumer<PropertyListStore, PropertyListStoreState>(
-                bloc: propertyListStore,
+            body: BlocConsumer<ViewPropertyStore, ViewPropertyStoreState>(
+                bloc: propertyDetailsStore,
                 listener:
                     ( context, state )
                     {
@@ -74,42 +73,45 @@ class PropertyListPageState
                 builder:
                     ( context, state )
                     {
-                        if ( state is PropertyListStoreInitialState )
+                        if ( state is ViewPropertyStoreInitialState )
                         {
                             return const Text( 'Initial' );
                         }
-                        else if ( state is PropertyListStoreLoadingState )
+                        else if ( state is ViewPropertyStoreLoadingState )
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is PropertyListStoreErrorState )
+                        if ( state is ViewPropertyStoreErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
-                        else if ( state is PropertyListStoreLoadedState )
+                        else if ( state is ViewPropertyStoreLoadedState )
                         {
-                            return
-                                ListView.builder(
-                                    physics: const ScrollPhysics(),
-                                    shrinkWrap: true,
-                                    itemCount: state.propertyList.length,
-                                    itemBuilder:
-                                        ( context, index )
-                                        {
-                                            final
-                                                property = state.propertyList[ index ];
-
-                                            return ListTile(
-                                                title: Text( getLocalizedText( property.title ) ),
-                                                leading: CachedNetworkImage(
-                                                    imageUrl: getStorageImagePath( property.imagePath, 640 ),
+                            return Column(
+                                children: [
+                                    Text( getLocalizedText( state.property.title ) ),
+                                    Text( getLocalizedText( state.property.description ) ),
+                                    Expanded(
+                                        child: ListView.builder(
+                                            itemCount: state.property.imagePathArray.length,
+                                            itemBuilder: ( context, index )
+                                            {
+                                                return CachedNetworkImage(
+                                                    imageUrl: getStorageImagePath( state.property.imagePathArray[ index ], 640 ),
                                                     placeholder: ( context, url ) => const CircularProgressIndicator(),
                                                     errorWidget: ( context, url, error ) => const Icon( Icons.error )
-                                                    ),
-                                                onTap: () => context.go( '/property/${ property.id }' ),
-                                                );
-                                        }
-                                    );
+                                                    );
+                                            }
+                                            )
+                                        ),
+                                    Center(
+                                        child: ElevatedButton(
+                                            onPressed: () => context.go( '/' ),
+                                            child: const Text( 'Back' )
+                                            )
+                                        )
+                                    ]
+                                );
                         }
                         else
                         {
@@ -123,23 +125,28 @@ class PropertyListPageState
 
 // ~~
 
-class PropertyListPage
-    extends StatefulWidget
+class ViewPropertyPage extends StatefulWidget
 {
+    // -- ATTRIBUTES
+
+    final String
+        propertyId;
+
     // -- CONSTRUCTORS
 
-    const PropertyListPage(
+    const ViewPropertyPage(
         {
-            super.key
+            super.key,
+            required this.propertyId
         }
         );
 
     // -- OPERATIONS
 
     @override
-    PropertyListPageState createState(
+    ViewPropertyPageState createState(
         )
     {
-        return PropertyListPageState();
+        return ViewPropertyPageState();
     }
 }

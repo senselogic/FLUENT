@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'page/property_details_page.dart';
-import 'page/property_list_page.dart';
-import 'page/sign_in_page.dart';
-import 'page/sign_up_page.dart';
-import 'page/dashboard/dashboard_property_list_page.dart';
-import 'page/dashboard/dashboard_property_edition_page.dart';
+import 'page/view_property_page.dart';
+import 'page/view_properties_page.dart';
+import 'page/sign_in_user_page.dart';
+import 'page/sign_up_user_page.dart';
+import 'page/user/edit_properties_page.dart';
+import 'page/user/edit_property_page.dart';
 
 // -- VARIABLES
 
@@ -25,7 +25,7 @@ final GoRouter
                             {
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: const PropertyListPage(),
+                                    child: const ViewPropertiesPage(),
                                     transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                     {
                                         return FadeTransition( opacity: animation, child: child );
@@ -42,7 +42,7 @@ final GoRouter
 
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: PropertyDetailsPage( propertyId: propertyId ),
+                                    child: ViewPropertyPage( propertyId: propertyId ),
                                     transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                     {
                                         return FadeTransition( opacity: animation, child: child );
@@ -57,7 +57,7 @@ final GoRouter
                             {
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: PublicSignInPage(),
+                                    child: PublicSignInUserPage(),
                                     transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                     {
                                         return FadeTransition( opacity: animation, child: child );
@@ -72,7 +72,7 @@ final GoRouter
                             {
                                 return CustomTransitionPage(
                                     key: state.pageKey,
-                                    child: PublicSignUpScreen(),
+                                    child: PublicSignUpUserScreen(),
                                     transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                     {
                                         return FadeTransition( opacity: animation, child: child );
@@ -103,7 +103,7 @@ final GoRouter
                                     {
                                         return CustomTransitionPage(
                                             key: state.pageKey,
-                                            child: const DashboardPropertyListPage(),
+                                            child: const EditPropertiesPage(),
                                             transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                             {
                                                 return FadeTransition( opacity: animation, child: child );
@@ -120,7 +120,7 @@ final GoRouter
 
                                         return CustomTransitionPage(
                                             key: state.pageKey,
-                                            child: DashboardPropertyEditionPage( propertyId: propertyId ),
+                                            child: EditPropertyPage( propertyId: propertyId ),
                                             transitionsBuilder: ( context, animation, secondaryAnimation, child )
                                             {
                                                 return FadeTransition( opacity: animation, child: child );

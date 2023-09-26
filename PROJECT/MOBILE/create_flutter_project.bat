@@ -27,6 +27,7 @@ rem call flutter pub add eva_icons_flutter
 rem call flutter pub add flutter_feather_icons
 rem call flutter pub add flutter_form_builder
 rem call flutter pub add flutter_local_notifications
+rem call flutter pub add flutter_map
 rem call flutter pub add flutter_markdown
 rem call flutter pub add flutter_native_splash
 rem call flutter pub add flutter_phosphor_icons

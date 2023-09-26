@@ -3,19 +3,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'dashboard_property_edition_page.dart';
-import 'dashboard_property_list_store.dart';
-import 'dashboard_property_list_store_state.dart';
+import 'edit_property_page.dart';
+import 'edit_properties_store.dart';
+import 'edit_properties_store_state.dart';
 
 // -- TYPES
 
-class DashboardPropertyListPageState
-    extends State<DashboardPropertyListPage>
+class EditPropertiesPageState
+    extends State<EditPropertiesPage>
 {
     // -- ATTRIBUTES
 
-    late final DashboardPropertyListStore
-        dashboardPropertyListStore;
+    late final EditPropertiesStore
+        editPropertiesStore;
 
     // -- OPERATIONS
 
@@ -25,8 +25,8 @@ class DashboardPropertyListPageState
     {
         super.initState();
 
-        dashboardPropertyListStore = DashboardPropertyListStore();
-        dashboardPropertyListStore.fetch();
+        editPropertiesStore = EditPropertiesStore();
+        editPropertiesStore.fetch();
     }
 
     // ~~
@@ -56,37 +56,37 @@ class DashboardPropertyListPageState
                         )
                     ]
                 ),
-            body: BlocConsumer<DashboardPropertyListStore, DashboardPropertyListStoreState> (
-                bloc: dashboardPropertyListStore,
+            body: BlocConsumer<EditPropertiesStore, EditPropertiesStoreState> (
+                bloc: editPropertiesStore,
                 listener: ( context, state )
                 {},
                 builder: ( context, state )
                 {
-                    if ( state is DashboardPropertyListStoreInitialState )
+                    if ( state is EditPropertiesStoreInitialState )
                     {
                         return const Text( 'Initial' );
                     }
-                    else if ( state is DashboardPropertyListStoreLoadingState )
+                    else if ( state is EditPropertiesStoreLoadingState )
                     {
                         return const Center( child: CircularProgressIndicator() );
                     }
-                    else if ( state is DashboardPropertyListStoreErrorState )
+                    else if ( state is EditPropertiesStoreErrorState )
                     {
                         return Center( child: Text( state.error ) );
                     }
-                    else if ( state is DashboardPropertyListStoreLoadedState )
+                    else if ( state is EditPropertiesStoreLoadedState )
                     {
                         return ListView.builder(
                             physics: const ScrollPhysics(),
                             shrinkWrap: true,
-                            itemCount: state.dashboardPropertyList.length,
+                            itemCount: state.userPropertyList.length,
                             itemBuilder: ( context, index )
                             {
-                                final dashboardProperty = state.dashboardPropertyList[ index ];
+                                final dashboardProperty = state.userPropertyList[ index ];
                                 return ListTile(
                                     title: Text( dashboardProperty.title ),
                                     onTap: () => Navigator.push( context, MaterialPageRoute(
-                                        builder: ( context ) => DashboardPropertyEditionPage( propertyId: dashboardProperty.id )
+                                        builder: ( context ) => EditPropertyPage( propertyId: dashboardProperty.id )
                                     ) ),
                                 );
                             },
@@ -112,12 +112,12 @@ class DashboardPropertyListPageState
 
 // ~~
 
-class DashboardPropertyListPage
+class EditPropertiesPage
     extends StatefulWidget
 {
     // -- CONSTRUCTORS
 
-    const DashboardPropertyListPage(
+    const EditPropertiesPage(
         {
             super.key
         }
@@ -126,9 +126,9 @@ class DashboardPropertyListPage
     // -- OPERATIONS
 
     @override
-    DashboardPropertyListPageState createState(
+    EditPropertiesPageState createState(
         )
     {
-        return DashboardPropertyListPageState();
+        return EditPropertiesPageState();
     }
 }
