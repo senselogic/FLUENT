@@ -6,8 +6,8 @@ import 'page/view_property_page.dart';
 import 'page/view_properties_page.dart';
 import 'page/sign_in_user_page.dart';
 import 'page/sign_up_user_page.dart';
-import 'page/user/edit_properties_page.dart';
-import 'page/user/edit_property_page.dart';
+import 'page/edit_properties_page.dart';
+import 'page/edit_property_page.dart';
 
 // -- VARIABLES
 

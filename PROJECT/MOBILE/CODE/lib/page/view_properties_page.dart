@@ -6,8 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
 import '../storage/storage.dart';
-import 'view_properties_store.dart';
-import 'view_properties_store_state.dart';
+import '../state/view_properties_state.dart';
+import '../store/view_properties_store.dart';
 
 // -- TYPES
 
@@ -65,7 +65,7 @@ class ViewPropertiesPageState
                         )
                     ]
                 ),
-            body: BlocConsumer<ViewPropertiesStore, ViewPropertiesStoreState>(
+            body: BlocConsumer<ViewPropertiesStore, ViewPropertiesState>(
                 bloc: propertyListStore,
                 listener:
                     ( context, state )
@@ -74,19 +74,19 @@ class ViewPropertiesPageState
                 builder:
                     ( context, state )
                     {
-                        if ( state is ViewPropertiesStoreInitialState )
+                        if ( state is ViewPropertiesInitialState )
                         {
                             return const Text( 'Initial' );
                         }
-                        else if ( state is ViewPropertiesStoreLoadingState )
+                        else if ( state is ViewPropertiesLoadingState )
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is ViewPropertiesStoreErrorState )
+                        if ( state is ViewPropertiesErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
-                        else if ( state is ViewPropertiesStoreLoadedState )
+                        else if ( state is ViewPropertiesLoadedState )
                         {
                             return
                                 ListView.builder(

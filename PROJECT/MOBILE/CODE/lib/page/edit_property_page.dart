@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../entity/property.dart';
-import 'edit_property_store.dart';
+import '../../entity/property.dart';
+import '../store/edit_property_store.dart';
 
 // -- TYPES
 
@@ -42,7 +42,7 @@ class EditPropertyPageState extends State<EditPropertyPage>
     Widget build( BuildContext context )
     {
         return Scaffold(
-            appBar: AppBar( 
+            appBar: AppBar(
                 title: Text( property == null ? 'Add Property' : 'Edit Property' ),
                 actions: [
                     IconButton(
@@ -60,7 +60,7 @@ class EditPropertyPageState extends State<EditPropertyPage>
                         }
                         )
                     ]
-                ),                
+                ),
             body: Padding(
                 padding: const EdgeInsets.all( 16.0 ),
                     child: Form(
@@ -113,7 +113,7 @@ class EditPropertyPage
 
     const EditPropertyPage(
         {
-            super.key, 
+            super.key,
             required this.propertyId
         }
         );

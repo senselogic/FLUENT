@@ -6,8 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
 import '../storage/storage.dart';
-import 'view_property_store.dart';
-import 'view_property_store_state.dart';
+import '../state/view_property_state.dart';
+import '../store/view_property_store.dart';
 
 // -- TYPES
 
@@ -64,7 +64,7 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
                         )
                     ]
                 ),
-            body: BlocConsumer<ViewPropertyStore, ViewPropertyStoreState>(
+            body: BlocConsumer<ViewPropertyStore, ViewPropertyState>(
                 bloc: propertyDetailsStore,
                 listener:
                     ( context, state )
@@ -73,19 +73,19 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
                 builder:
                     ( context, state )
                     {
-                        if ( state is ViewPropertyStoreInitialState )
+                        if ( state is ViewPropertyInitialState )
                         {
                             return const Text( 'Initial' );
                         }
-                        else if ( state is ViewPropertyStoreLoadingState )
+                        else if ( state is ViewPropertyLoadingState )
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is ViewPropertyStoreErrorState )
+                        if ( state is ViewPropertyErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
-                        else if ( state is ViewPropertyStoreLoadedState )
+                        else if ( state is ViewPropertyLoadedState )
                         {
                             return Column(
                                 children: [

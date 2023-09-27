@@ -1,19 +1,19 @@
 // -- IMPORTS
 
 import 'package:bloc/bloc.dart';
-import '../../../service/property_service.dart';
-import 'edit_property_store_state.dart';
+import '../../service/property_service.dart';
+import '../state/edit_property_state.dart';
 
 // -- TYPES
 
 class EditPropertyStore
-    extends Cubit<EditPropertyStoreState>
+    extends Cubit<EditPropertyState>
 {
     // -- CONSTRUCTORS
 
     EditPropertyStore(
         ) :
-        super( EditPropertyStoreInitialState() );
+        super( EditPropertyInitialState() );
 
     // -- OPERATIONS
 
@@ -23,13 +23,13 @@ class EditPropertyStore
     {
         try
         {
-            emit( EditPropertyStoreLoadingState() );
+            emit( EditPropertyLoadingState() );
             final property = await propertyService.getPropertyById( propertyId );
-            emit( EditPropertyStoreLoadedState( property: property ) );
+            emit( EditPropertyLoadedState( property: property ) );
         }
         catch ( exception )
         {
-            emit( EditPropertyStoreErrorState( error: exception.toString() ) );
+            emit( EditPropertyErrorState( error: exception.toString() ) );
         }
     }
 }

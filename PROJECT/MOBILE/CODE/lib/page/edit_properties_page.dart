@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'edit_property_page.dart';
-import 'edit_properties_store.dart';
-import 'edit_properties_store_state.dart';
+import '../state/edit_properties_state.dart';
+import '../store/edit_properties_store.dart';
 
 // -- TYPES
 
@@ -37,7 +37,7 @@ class EditPropertiesPageState
         )
     {
         return Scaffold(
-            appBar: AppBar( 
+            appBar: AppBar(
                 title: const Text( 'Properties' ),
                 actions: [
                     IconButton(
@@ -56,25 +56,25 @@ class EditPropertiesPageState
                         )
                     ]
                 ),
-            body: BlocConsumer<EditPropertiesStore, EditPropertiesStoreState> (
+            body: BlocConsumer<EditPropertiesStore, EditPropertiesState> (
                 bloc: editPropertiesStore,
                 listener: ( context, state )
                 {},
                 builder: ( context, state )
                 {
-                    if ( state is EditPropertiesStoreInitialState )
+                    if ( state is EditPropertiesInitialState )
                     {
                         return const Text( 'Initial' );
                     }
-                    else if ( state is EditPropertiesStoreLoadingState )
+                    else if ( state is EditPropertiesLoadingState )
                     {
                         return const Center( child: CircularProgressIndicator() );
                     }
-                    else if ( state is EditPropertiesStoreErrorState )
+                    else if ( state is EditPropertiesErrorState )
                     {
                         return Center( child: Text( state.error ) );
                     }
-                    else if ( state is EditPropertiesStoreLoadedState )
+                    else if ( state is EditPropertiesLoadedState )
                     {
                         return ListView.builder(
                             physics: const ScrollPhysics(),
