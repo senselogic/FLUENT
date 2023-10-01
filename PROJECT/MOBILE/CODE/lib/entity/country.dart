@@ -5,19 +5,27 @@ class Country
     // -- ATTRIBUTES
 
     final String
-        code,
+        code;
+    final double
+        number;
+    final String
         name,
         fullName,
-        continentCode;
+        continentCode,
+        iconImagePath,
+        phonePrefix;
 
     // -- CONSTRUCTORS
 
     Country(
         {
             required this.code,
+            required this.number,
             required this.name,
             required this.fullName,
-            required this.continentCode
+            required this.continentCode,
+            required this.iconImagePath,
+            required this.phonePrefix
         }
         );
 
@@ -45,17 +53,23 @@ class Country
     Country copyWith(
         {
             String? code,
+            double? number,
             String? name,
             String? fullName,
-            String? continentCode
+            String? continentCode,
+            String? iconImagePath,
+            String? phonePrefix
         }
         )
     {
         return Country(
             code: code ?? this.code,
+            number: number ?? this.number,
             name: name ?? this.name,
             fullName: fullName ?? this.fullName,
-            continentCode: continentCode ?? this.continentCode
+            continentCode: continentCode ?? this.continentCode,
+            iconImagePath: iconImagePath ?? this.iconImagePath,
+            phonePrefix: phonePrefix ?? this.phonePrefix
             );
     }
 
@@ -67,9 +81,12 @@ class Country
     {
         return Country(
             code: map[ 'code' ],
+            number: map[ 'number' ],
             name: map[ 'name' ],
             fullName: map[ 'fullName' ],
-            continentCode: map[ 'continentCode' ]
+            continentCode: map[ 'continentCode' ],
+            iconImagePath: map[ 'iconImagePath' ],
+            phonePrefix: map[ 'phonePrefix' ]
             );
     }
 
@@ -81,9 +98,12 @@ class Country
         return
             {
                 'code': code,
+                'number': number,
                 'name': name,
                 'fullName': fullName,
-                'continentCode': continentCode
+                'continentCode': continentCode,
+                'iconImagePath': iconImagePath,
+                'phonePrefix': phonePrefix
             };
     }
 
@@ -93,7 +113,7 @@ class Country
     String toString(
         )
     {
-        return 'Country { code: $code, name: $name, fullName: $fullName, continentCode: $continentCode }';
+        return 'Country { code: $code, number: $number, name: $name, fullName: $fullName, continentCode: $continentCode, iconImagePath: $iconImagePath, phonePrefix: $phonePrefix }';
     }
 
     // ~~

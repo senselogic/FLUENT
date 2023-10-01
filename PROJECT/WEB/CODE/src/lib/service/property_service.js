@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { printError } from 'senselogic-gist';
+import { logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 
 // -- TYPES
@@ -53,7 +53,7 @@ class PropertyService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         if ( data !== null )
@@ -79,7 +79,7 @@ class PropertyService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         return data;
@@ -100,7 +100,7 @@ class PropertyService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         return data;
@@ -120,7 +120,7 @@ class PropertyService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         return data;

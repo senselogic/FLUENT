@@ -18,6 +18,20 @@
         color: redColor;
     }
 
+    .property-title-image
+    {
+        margin-left: 1rem;
+        height: 2rem;
+        width: 2rem;
+
+        display: inline-block;
+
+        background-color: redColor;
+        mask: url( '/image/icon/light/map-pin-light.svg' ) no-repeat center center / contain;
+
+        color: #4353B5;
+    }
+
     .property-image-list
     {
         display: flex;
@@ -38,6 +52,8 @@
     <div class="property">
         <div class="property-title">
             { getLocalizedText( data.property.title ) }
+            <span class="property-title-image">
+            </span>
         </div>
         <div class="property-image-list">
             { #each data.property.imagePathArray as imagePath }

@@ -18,9 +18,12 @@ public
     COUNTRY | dropped
 
         code : STRING | key, unique
+        number : FLOAT64
         name : STRING
         fullName : STRING
         continentCode : CONTINENT.code
+        iconImagePath : STRING = "/image/flag/{{.code}}.svg"
+        phonePrefix : STRING
         creationTimestamp : TIMESTAMP | generated
         updateTimestamp : TIMESTAMP | generated, updated
 

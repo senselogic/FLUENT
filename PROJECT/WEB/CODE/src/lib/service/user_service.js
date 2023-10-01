@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { printError } from 'senselogic-gist';
+import { logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 
 // -- TYPES
@@ -24,7 +24,7 @@ class UserService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         return user;
@@ -47,7 +47,7 @@ class UserService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
 
         return user;
@@ -63,7 +63,7 @@ class UserService
 
         if ( error !== null )
         {
-            printError( error );
+            logError( error );
         }
     }
 }
