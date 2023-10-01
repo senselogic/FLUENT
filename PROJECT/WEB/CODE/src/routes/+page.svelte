@@ -1,3 +1,28 @@
+<script>
+    // -- IMPORTS
+
+    import { getLocalizedText } from 'senselogic-gist';
+    import { getStorageImagePath } from '$lib/storage.js';
+
+    // -- STATEMENTS
+
+    export let data;
+</script>
+
+<div class="property-list">
+    { #each data.propertyArray as property }
+        <div class="property">
+            <img class="property-image" src="{ getStorageImagePath( property.imagePath, 640 ) }"/>
+            <div class="property-title">
+                <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
+                <div>
+                    { getLocalizedText( property.description ) }
+                </div>
+            </div>
+        </div>
+    { /each }
+</div>
+
 <style lang="stylus">
     // -- IMPORTS
 
@@ -33,28 +58,3 @@
         object-fit: cover;
     }
 </style>
-
-<div class="property-list">
-    { #each data.propertyArray as property }
-        <div class="property">
-            <img class="property-image" src="{ getStorageImagePath( property.imagePath, 640 ) }"/>
-            <div class="property-title">
-                <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
-                <div>
-                    { getLocalizedText( property.description ) }
-                </div>
-            </div>
-        </div>
-    { /each }
-</div>
-
-<script>
-    // -- IMPORTS
-
-    import { getLocalizedText } from 'senselogic-gist';
-    import { getStorageImagePath } from '$lib/storage.js';
-
-    // -- STATEMENTS
-
-    export let data;
-</script>
