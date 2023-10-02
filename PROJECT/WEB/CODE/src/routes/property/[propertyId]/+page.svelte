@@ -9,27 +9,6 @@
     export let data;
 </script>
 
-<div class="property-list">
-    <div class="property">
-        <div class="property-title">
-            { getLocalizedText( data.property.title ) }
-            <span class="property-title-image">
-            </span>
-        </div>
-        <div class="property-image-list">
-            { #each data.property.imagePathArray as imagePath }
-                <div class="property-image-container">
-                    <img class="property-image" src="{ getStorageImagePath( imagePath, 640 ) }"/>
-                </div>
-            { /each }
-        </div>
-    </div>
-</div>
-
-<div>
-    <a href="/">Back</a>
-</div>
-
 <style lang="stylus">
     // -- IMPORTS
 
@@ -50,18 +29,13 @@
         color: redColor;
     }
 
-    .property-title-image
+    .property-title-icon
     {
         margin-left: 1rem;
         height: 2rem;
         width: 2rem;
 
         display: inline-block;
-
-        background-color: redColor;
-        mask: url( '/image/icon/light/map-pin-light.svg' ) no-repeat center center / contain;
-
-        color: #4353B5;
     }
 
     .property-image-list
@@ -79,3 +53,24 @@
         object-fit: cover;
     }
 </style>
+
+<div class="property-list">
+    <div class="property">
+        <div class="property-title">
+            { getLocalizedText( data.property.title ) }
+            <span class="green-map-pin-icon property-title-icon">
+            </span>
+        </div>
+        <div class="property-image-list">
+            { #each data.property.imagePathArray as imagePath }
+                <div class="property-image-container">
+                    <img class="property-image" src="{ getStorageImagePath( imagePath, 640 ) }"/>
+                </div>
+            { /each }
+        </div>
+    </div>
+</div>
+
+<div>
+    <a href="/">Back</a>
+</div>
