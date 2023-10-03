@@ -1,40 +1,82 @@
 // -- IMPORTS
 
-import { logError } from 'senselogic-gist';
+import { getMap, logError } from 'senselogic-gist';
 import { database } from '$lib/database';
+import { spaceService } from '$lib/service/space_service';
 
-// -- TYPES
+// -- FUNCTIONS
 
 class PropertyService
 {
+    // -- CONSTRUCTORS
+
+    constructor(
+        )
+    {
+        this.cachedPropertyArray = null;
+    }
+
     // -- INQUIRIES
 
-    async getPropertyByIdMap(
-        propertyArray
+    inflateProperty(
+        property,
+        propertySpaceArray
+        )
+    {
+        property.spaceArray = propertySpaceArray;
+        property.spaceByIdMap = getMap( propertySpaceArray );
+    }
+
+    // ~~
+
+    inflatePropertyArray(
+        propertyArray,
+        spaceArray
         )
     {
         let propertyByIdMap = {};
 
-        for ( const property of propertyArray)
+        for ( let property of propertyArray )
         {
-            property.imageArray = [];
+            property.spaceArray = [];
+            property.spaceByIdMap = {};
             propertyByIdMap[ property.id ] = property;
         }
 
-        return propertyByIdMap;
+        for ( let space of spaceArray )
+        {
+            let property = propertyByIdMap[ space.propertyId ];
+            property.spaceArray.push( space );
+            property.spaceByIdMap[ space.id ] = space;
+        }
     }
 
     // ~~
 
     async getPropertyArray(
-        imageArray
+        isInflated = false
         )
     {
         const { data, error }
             = await database
                   .from( 'PROPERTY' )
-                  .select()
-                  .order( 'number' );
+                  .select();
+
+        if ( error !== null )
+        {
+            logError( error );
+        }
+
+        if ( data !== null )
+        {
+            if ( isInflated )
+            {
+                this.inflatePropertyArray(
+                    data,
+                    await spaceService.getSpaceArray()
+                    );
+            }
+        }
 
         return data;
     }
@@ -42,7 +84,8 @@ class PropertyService
     // ~~
 
     async getPropertyById(
-        propertyId
+        propertyId,
+        isInflated = false
         )
     {
         const { data, error }
@@ -58,6 +101,14 @@ class PropertyService
 
         if ( data !== null )
         {
+            if ( isInflated )
+            {
+                this.inflateProperty(
+                    data[ 0 ],
+                    await spaceService.getSpaceArrayByPropertyId( data[ 0 ].id, true )
+                    );
+            }
+
             return data[ 0 ];
         }
         else
@@ -68,10 +119,33 @@ class PropertyService
 
     // -- OPERATIONS
 
+    clearCache(
+        )
+    {
+        this.cachedPropertyArray = null;
+    }
+
+    // ~~
+
+    async getCachedPropertyArray(
+        )
+    {
+        if ( this.cachedPropertyArray === null )
+        {
+            this.cachedPropertyArray = await this.getPropertyArray();
+        }
+
+        return this.cachedPropertyArray;
+    }
+
+    // ~~
+
     async addProperty(
         property
         )
     {
+        this.ClearCache();
+
         const { data, error }
             = await database
                   .from( 'PROPERTY' )
@@ -92,6 +166,8 @@ class PropertyService
         propertyId
         )
     {
+        this.ClearCache();
+
         const { data, error }
             = await database
                 .from( 'PROPERTY' )
@@ -112,6 +188,8 @@ class PropertyService
         propertyId
         )
     {
+        this.ClearCache();
+
         const { data, error }
             = await database
                 .from( 'PROPERTY' )

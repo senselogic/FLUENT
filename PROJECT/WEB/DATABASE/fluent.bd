@@ -2,3 +2,4 @@
 @include DATA/country.bd
 @include DATA/language.bd
 @include DATA/profile.bd
+@include DATA/space_type.bd
