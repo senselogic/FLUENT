@@ -64,7 +64,7 @@
         <div class="property-image-list">
             { #each data.property.imagePathArray as imagePath }
                 <div class="property-image-container">
-                    <img class="property-image" src="{ getStorageImagePath( imagePath, 640 ) }"/>
+                    <img class="property-image" src="{ getStorageImagePath( imagePath, 640 ) }" alt="property"/>
                 </div>
             { /each }
         </div>

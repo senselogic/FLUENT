@@ -1,4 +1,4 @@
-@echo select Skeleton, TypeScript, ESLint
+@echo select Skeleton, JavaScript, ESLint
 call npm create svelte@latest fluent-project
 rename fluent-project CODE
 cd CODE

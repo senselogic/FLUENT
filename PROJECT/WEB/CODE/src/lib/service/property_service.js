@@ -14,6 +14,7 @@ class PropertyService
         )
     {
         this.cachedPropertyArray = null;
+        this.cachedPropertyByIdMap = null;
     }
 
     // -- INQUIRIES
@@ -136,6 +137,19 @@ class PropertyService
         }
 
         return this.cachedPropertyArray;
+    }
+
+    // ~~
+
+    async getCachedPropertyByIdMap(
+        )
+    {
+        if ( this.cachedPropertyByIdMap === null )
+        {
+            this.cachedPropertyByIdMap = getMap( await this.getCachedPropertyArray(), 'id' );
+        }
+
+        return this.cachedPropertyByIdMap;
     }
 
     // ~~
