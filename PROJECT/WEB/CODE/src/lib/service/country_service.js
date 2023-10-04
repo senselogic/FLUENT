@@ -102,7 +102,7 @@ class CountryService
         country
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -124,7 +124,7 @@ class CountryService
         countryCode
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -146,7 +146,7 @@ class CountryService
         countryCode
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database

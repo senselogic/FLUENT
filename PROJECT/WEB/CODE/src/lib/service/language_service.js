@@ -102,7 +102,7 @@ class LanguageService
         language
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -124,7 +124,7 @@ class LanguageService
         languageCode
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -146,7 +146,7 @@ class LanguageService
         languageCode
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database

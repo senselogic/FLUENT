@@ -124,6 +124,7 @@ class PropertyService
         )
     {
         this.cachedPropertyArray = null;
+        this.cachedPropertyByIdMap = null;
     }
 
     // ~~
@@ -158,7 +159,7 @@ class PropertyService
         property
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -180,7 +181,7 @@ class PropertyService
         propertyId
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
@@ -202,7 +203,7 @@ class PropertyService
         propertyId
         )
     {
-        this.ClearCache();
+        this.clearCache();
 
         const { data, error }
             = await database
