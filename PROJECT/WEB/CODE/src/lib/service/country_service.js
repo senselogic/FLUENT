@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { logError } from 'senselogic-gist';
+import { getMap, logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 
 // -- FUNCTIONS

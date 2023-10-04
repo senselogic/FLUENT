@@ -15,7 +15,7 @@ class UserService
         )
     {
         const { user, error }
-            = await supabase.auth.signUp(
+            = await database.auth.signUp(
                   {
                       email,
                       password
@@ -38,7 +38,7 @@ class UserService
         )
     {
         const { user, error }
-            = await supabase.auth.signIn(
+            = await database.auth.signIn(
                   {
                       email,
                       password
@@ -59,7 +59,7 @@ class UserService
         )
     {
         const { error }
-            = await supabase.auth.signOut();
+            = await database.auth.signOut();
 
         if ( error !== null )
         {

@@ -1,13 +1,14 @@
 // -- IMPORTS
 
 import { json } from '@sveltejs/kit';
-import { getRandomTuid } from 'senselogic-gist';
 import { propertyService } from '$lib/service/property_service';
 
 // -- FUNCTIONS
 
 export async function GET(
-    { params }
+    {
+        params
+    }
     )
 {
     let property = await propertyService.getPropertyById( params.propertyId );
@@ -18,10 +19,12 @@ export async function GET(
 // ~~
 
 export async function PUT(
-    { params }
+    {
+        params
+    }
     )
 {
-    const property = await setDatabasePropertyById(
+    const property = await propertyService.setDatabasePropertyById(
         {
         },
         params.propertyId

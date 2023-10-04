@@ -6,7 +6,6 @@ import { propertyService } from '$lib/service/property_service';
 // -- FUNCTIONS
 
 export async function GET(
-    { params }
     )
 {
     let propertyArray = await propertyService.getPropertyArray();
