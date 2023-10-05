@@ -3,6 +3,7 @@
 
     import { getLocalizedText } from 'senselogic-gist';
     import { getStorageImagePath } from '$lib/storage.js';
+    import { languageTagStore } from '$lib/store/languageTagStore';
 
     // -- STATEMENTS
 
@@ -57,7 +58,7 @@
 <div class="property-list">
     <div class="property">
         <div class="property-title">
-            { getLocalizedText( data.property.title ) }
+            { getLocalizedText( data.property.title, $languageTagStore ) }
             <span class="green-map-pin-icon property-title-icon">
             </span>
         </div>

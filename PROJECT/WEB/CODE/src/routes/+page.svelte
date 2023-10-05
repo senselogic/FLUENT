@@ -3,6 +3,7 @@
 
     import { getLocalizedText } from 'senselogic-gist';
     import { getStorageImagePath } from '$lib/storage.js';
+    import { languageTagStore } from '$lib/store/languageTagStore';
 
     // -- STATEMENTS
 
@@ -50,9 +51,9 @@
         <div class="property">
             <img class="property-image" src="{ getStorageImagePath( property.imagePath, 640 ) }" alt="property"/>
             <div class="property-title">
-                <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title ) }</a>
+                <a class="color-green-500" href="/property/{ property.id }">{ getLocalizedText( property.title, $languageTagStore ) }</a>
                 <div>
-                    { getLocalizedText( property.description ) }
+                    { getLocalizedText( property.description, $languageTagStore ) }
                 </div>
             </div>
         </div>
