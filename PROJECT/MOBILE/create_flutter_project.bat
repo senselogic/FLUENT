@@ -15,6 +15,7 @@ call flutter pub add go_router
 call flutter pub add senselogic_gist
 call flutter pub add shared_preferences
 call flutter pub add sized_context
+call flutter pub add styled_widget
 call flutter pub add supabase_flutter
 call flutter pub add universal_platform
 call flutter pub add uuid
