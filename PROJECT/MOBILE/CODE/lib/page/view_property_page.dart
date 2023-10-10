@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:senselogic_gist/senselogic_gist.dart';
-import '../storage/storage.dart';
 import '../state/view_property_state.dart';
+import '../storage/storage.dart';
 import '../store/view_property_store.dart';
 
 // -- TYPES

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../entity/property.dart';
+import '../entity/property.dart';
 import '../store/edit_property_store.dart';
 
 // -- TYPES

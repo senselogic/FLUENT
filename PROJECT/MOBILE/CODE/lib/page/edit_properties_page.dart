@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'edit_property_page.dart';
 import '../state/edit_properties_state.dart';
 import '../store/edit_properties_store.dart';
+import 'edit_property_page.dart';
 
 // -- TYPES
 
