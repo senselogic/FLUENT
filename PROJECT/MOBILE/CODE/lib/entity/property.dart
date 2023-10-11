@@ -135,7 +135,19 @@ class Property
     String toString(
         )
     {
-        return 'Property { id: $id, number: $number, city: $city, country: $country, title: $title, description: $description, price: $price, imagePath: $imagePath, imagePathArray: $imagePathArray, propertyByNameMap: $propertyByNameMap }';
+        return
+            'Property {'
+            ' id: $id,'
+            ' number: $number,'
+            ' city: $city,'
+            ' country: $country,'
+            ' title: $title,'
+            ' description: $description,'
+            ' price: $price,'
+            ' imagePath: $imagePath,'
+            ' imagePathArray: $imagePathArray,'
+            ' propertyByNameMap: $propertyByNameMap '
+            '}';
     }
 
     // ~~

@@ -117,7 +117,17 @@ class Profile
     String toString(
         )
     {
-        return 'Profile { id: $id, userId: $userId, firstName: $firstName, lastName: $lastName, email: $email, phoneNumber: $phoneNumber, countryCode: $countryCode, imagePath: $imagePath }';
+        return
+            'Profile {'
+            ' id: $id,'
+            ' userId: $userId,'
+            ' firstName: $firstName,'
+            ' lastName: $lastName,'
+            ' email: $email,'
+            ' phoneNumber: $phoneNumber,'
+            ' countryCode: $countryCode,'
+            ' imagePath: $imagePath '
+            '}';
     }
 
     // ~~

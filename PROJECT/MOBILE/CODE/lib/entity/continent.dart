@@ -81,7 +81,11 @@ class Continent
     String toString(
         )
     {
-        return 'Continent { code: $code, name: $name }';
+        return
+            'Continent {'
+            ' code: $code,'
+            ' name: $name '
+            '}';
     }
 
     // ~~

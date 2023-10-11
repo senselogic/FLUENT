@@ -113,7 +113,16 @@ class Country
     String toString(
         )
     {
-        return 'Country { code: $code, number: $number, name: $name, fullName: $fullName, continentCode: $continentCode, iconImagePath: $iconImagePath, phonePrefix: $phonePrefix }';
+        return
+            'Country {'
+            ' code: $code,'
+            ' number: $number,'
+            ' name: $name,'
+            ' fullName: $fullName,'
+            ' continentCode: $continentCode,'
+            ' iconImagePath: $iconImagePath,'
+            ' phonePrefix: $phonePrefix '
+            '}';
     }
 
     // ~~

@@ -30,6 +30,7 @@ dependencies:
   sized_context: ^1.0.0+4
   styled_widget: ^0.4.1
   supabase_flutter: ^1.10.18
+  textstyle_extensions: ^2.0.0-nullsafety
   universal_platform: ^1.0.0+1
   uuid: ^4.0.0
 

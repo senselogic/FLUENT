@@ -113,7 +113,16 @@ class Space
     String toString(
         )
     {
-        return 'Space { id: $id, propertyId: $propertyId, typeId: $typeId, name: $name, description: $description, floorNumber: $floorNumber, area: $area }';
+        return
+            'Space {'
+            ' id: $id,'
+            ' propertyId: $propertyId,'
+            ' typeId: $typeId,'
+            ' name: $name,'
+            ' description: $description,'
+            ' floorNumber: $floorNumber,'
+            ' area: $area '
+            '}';
     }
 
     // ~~

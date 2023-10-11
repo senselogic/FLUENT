@@ -89,7 +89,12 @@ class Language
     String toString(
         )
     {
-        return 'Language { code: $code, number: $number, name: $name }';
+        return
+            'Language {'
+            ' code: $code,'
+            ' number: $number,'
+            ' name: $name '
+            '}';
     }
 
     // ~~

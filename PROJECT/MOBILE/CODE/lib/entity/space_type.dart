@@ -89,7 +89,12 @@ class SpaceType
     String toString(
         )
     {
-        return 'SpaceType { id: $id, number: $number, name: $name }';
+        return
+            'SpaceType {'
+            ' id: $id,'
+            ' number: $number,'
+            ' name: $name '
+            '}';
     }
 
     // ~~
