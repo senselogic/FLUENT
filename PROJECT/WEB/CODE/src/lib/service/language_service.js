@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { getMap, logError } from 'senselogic-gist';
+import { getMapByCode, logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 
 // -- FUNCTIONS
@@ -90,7 +90,7 @@ class LanguageService
     {
         if ( this.cachedLanguageByCodeMap === null )
         {
-            this.cachedLanguageByCodeMap = getMap( await this.getCachedLanguageArray(), 'code' );
+            this.cachedLanguageByCodeMap = getMapByCode( await this.getCachedLanguageArray() );
         }
 
         return this.cachedLanguageByCodeMap;

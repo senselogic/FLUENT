@@ -266,9 +266,9 @@
     whatwg-url "^5.0.0"
 
 "@supabase/postgrest-js@^1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@supabase/postgrest-js/-/postgrest-js-1.8.4.tgz#89e8355503979ad25e7340b910d17704507ab325"
-  integrity sha512-ELjpvhb04wILUiJz9zIsTSwaz9LQNlX+Ig5/LgXQ7k68qQI6NqHVn+ISRNt53DngUIyOnLHjeqqIRHBZ7zpgGA==
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/@supabase/postgrest-js/-/postgrest-js-1.8.5.tgz#ccfc3208f2dc9b15e07eb6a056226b46fa091937"
+  integrity sha512-XvoqN5e5Z4TsQOYWLQYLW0HIlZtFSzwAcwiuToaSBSTpLOGCg4NaZ7au5GfBzCQJZdZPY5vk5FvwthfDsQK/Jw==
   dependencies:
     "@supabase/node-fetch" "^2.6.14"
 
@@ -1049,9 +1049,9 @@ magic-string@^0.27.0:
     "@jridgewell/sourcemap-codec" "^1.4.13"
 
 magic-string@^0.30.0, magic-string@^0.30.3:
-  version "0.30.4"
-  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.4.tgz#c2c683265fc18dda49b56fc7318d33ca0332c98c"
-  integrity sha512-Q/TKtsC5BPm0kGqgBIF9oXAs/xEf2vRKiIB4wCRQTJOQIByZ1d+NnUOotvJOvNpi5RNIgVOMC3pOuaP1ZTDlVg==
+  version "0.30.5"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.5.tgz#1994d980bd1c8835dc6e78db7cbd4ae4f24746f9"
+  integrity sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.15"
 
@@ -1330,9 +1330,9 @@ senselogic-flow@^0.0.13:
   integrity sha512-ImJtPINBTB08QveuwUbc7Ovl+fpHzxUcX3kI9ObmjO3/eK7DvlnraT3rAybvwcqDx19ZSPDEIh5NJCj+UWQRNw==
 
 senselogic-gist@^2.0.11:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.16.tgz#a6242c958cf4d32d3806c09d14ee32f636d1ea07"
-  integrity sha512-N8S5hXTwxBhZNOdQMsd/ntGPgviKPLGMiQEATPRjchcsEuxN4j5XnmVK2uozvmzS8N4E/Ih71LCrSPo/XMLyaA==
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.17.tgz#e7331cc37c2944709e46312076aaa37951876c7f"
+  integrity sha512-k6/LYBwGlsqqZM5TfwmSC8pcY9HOUyeCOMt0RN9J1nO4sY7r5TGoj9DMmSKhkPZUWDmn9BqStKuqqFVCaKHX/g==
   dependencies:
     md5 "^2.3.0"
 

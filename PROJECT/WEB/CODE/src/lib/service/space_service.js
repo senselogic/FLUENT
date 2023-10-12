@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { getMap, logError } from 'senselogic-gist';
+import { getMapById, logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 import { spaceTypeService } from '$lib/service/space_type_service';
 
@@ -155,7 +155,7 @@ class SpaceService
     {
         if ( this.cachedSpaceByIdMap === null )
         {
-            this.cachedSpaceByIdMap = getMap( await this.getCachedSpaceArray(), 'id' );
+            this.cachedSpaceByIdMap = getMapById( await this.getCachedSpaceArray() );
         }
 
         return this.cachedSpaceByIdMap;

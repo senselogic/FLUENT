@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { getMap, logError } from 'senselogic-gist';
+import { getMapByCode, logError } from 'senselogic-gist';
 import { database } from '$lib/database';
 
 // -- FUNCTIONS
@@ -90,7 +90,7 @@ class CountryService
     {
         if ( this.cachedCountryByCodeMap === null )
         {
-            this.cachedCountryByCodeMap = getMap( await this.getCachedCountryArray(), 'code' );
+            this.cachedCountryByCodeMap = getMapByCode( await this.getCachedCountryArray() );
         }
 
         return this.cachedCountryByCodeMap;
