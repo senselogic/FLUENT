@@ -16,7 +16,7 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
     // -- ATTRIBUTES
 
     late final ViewPropertyStore
-        propertyDetailsStore;
+        viewPropertyStore;
 
     // -- OPERATIONS
 
@@ -26,8 +26,8 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
     {
         super.initState();
 
-        propertyDetailsStore = ViewPropertyStore();
-        propertyDetailsStore.fetch( widget.propertyId );
+        viewPropertyStore = ViewPropertyStore();
+        viewPropertyStore.fetch( widget.propertyId );
     }
 
     // ~~
@@ -65,7 +65,7 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
                     ]
                 ),
             body: BlocConsumer<ViewPropertyStore, ViewPropertyState>(
-                bloc: propertyDetailsStore,
+                bloc: viewPropertyStore,
                 listener:
                     ( context, state )
                     {
@@ -81,7 +81,7 @@ class ViewPropertyPageState extends State<ViewPropertyPage>
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is ViewPropertyErrorState )
+                        else if ( state is ViewPropertyErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }

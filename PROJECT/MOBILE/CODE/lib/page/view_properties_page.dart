@@ -40,7 +40,7 @@ class ViewPropertiesPageState
     {
         return Scaffold(
             appBar: AppBar(
-                title: const Text( 'Property Details' ),
+                title: const Text( 'Property list' ),
                 actions: [
                     IconButton(
                         icon: const Icon( Icons.home ),
@@ -82,7 +82,7 @@ class ViewPropertiesPageState
                         {
                             return const Center( child: CircularProgressIndicator() );
                         }
-                        if ( state is ViewPropertiesErrorState )
+                        else if ( state is ViewPropertiesErrorState )
                         {
                             return Center( child: Text( state.error ) );
                         }
