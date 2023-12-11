@@ -7,12 +7,12 @@ import 'router.dart';
 
 // -- TYPES
 
-class FluentApp
+class FluentProjectApp
     extends StatelessWidget
 {
     // -- CONSTRUCTORS
 
-    const FluentApp(
+    const FluentProjectApp(
         {
             super.key
         }
@@ -42,6 +42,6 @@ Future<void> main(
 
     await initializeDatabase();
 
-    runApp( const FluentApp() );
+    runApp( const FluentProjectApp() );
 }
 

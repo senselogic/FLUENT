@@ -1,6 +1,6 @@
 // -- IMPORTS
 
-import { PUBLIC_STORAGE_URL } from '$env/static/public';
+import { PUBLIC_FLUENT_PROJECT_STORAGE_URL } from '$env/static/public';
 
 // -- FUNCTIONS
 
@@ -10,7 +10,7 @@ export function getStorageFilePath(
 {
     if ( filePath.startsWith( '/upload/' ) )
     {
-        return PUBLIC_STORAGE_URL + filePath;
+        return PUBLIC_FLUENT_PROJECT_STORAGE_URL + filePath;
     }
     else
     {
