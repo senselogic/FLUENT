@@ -22,4 +22,4 @@ ReplaceText
     fluentProject
 ListChangedFiles
 DumpChangedLines
-#MoveFiles
+MoveFiles
