@@ -1256,15 +1256,15 @@ semver@^7.5.3:
   dependencies:
     lru-cache "^6.0.0"
 
-senselogic-flow@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/senselogic-flow/-/senselogic-flow-0.0.15.tgz#0821cbd52e8eb8f6b03afa0364b4a270c491d58d"
-  integrity sha512-oxkU3YJaiUWNNntHeUeMQWLC9aH9t/GjVaZJ5a1UcHhsvZEAoCZ6bAv5xKZDDKXe22RBR3rfb6IS4xQty+qukg==
+senselogic-flow@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/senselogic-flow/-/senselogic-flow-0.0.21.tgz#2dc168a721bf32e0e07d35f50dce4a5fe4f0616d"
+  integrity sha512-Plnxo3c5sK6s5F1O8MIVWOB4dmUy+aJ68PrFCyAlXocG0jRt45TpW3MuZwQ+jQQm+yBRtTfdDMhWB7OQ1tE7UQ==
 
-senselogic-gist@^2.0.18:
-  version "2.0.18"
-  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.18.tgz#3217670d3830b1f62ad22ad7b88a90e8de9e9c88"
-  integrity sha512-9P8YN+HeyfbgrpcxU1kOb9vFOEZYZHzYiZkxfm9EmkEkV4Jmwp9eQ8LGaOogIqr//LJOMaEejmD7h0uR06GQzg==
+senselogic-gist@^2.0.20:
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/senselogic-gist/-/senselogic-gist-2.0.20.tgz#1efb96e4f0d395cb34048585939ab66143de34ce"
+  integrity sha512-03hEEblzDOBWpQYULsbLSOwwGyYenW5/W0NAmNmVS4JlZqHvRlxdVWPOQ7Id2aY5T0Ce4Y3/mh4jAfpGQMXsfA==
   dependencies:
     md5 "^2.3.0"
 
