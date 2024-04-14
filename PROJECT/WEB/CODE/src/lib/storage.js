@@ -27,7 +27,11 @@ export function getStorageImagePath(
 {
     if ( !isNaN( imageWidth ) )
     {
-        if ( imagePath.endsWith( '.jpg' ) )
+        if ( imagePath.endsWith( '.avif' ) )
+        {
+            imagePath += '.' + imageWidth + '.avif';
+        }
+        else if ( imagePath.endsWith( '.jpg' ) )
         {
             imagePath += '.' + imageWidth + '.jpg';
         }
